@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #161d20;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #111618;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #192125;
+    border-radius: 20px;
+    border: 0px;
+}
+
+.background-image {
+    animation: rotation 1500s infinite linear;
+    z-index: -1;
+    position: fixed;
+    top:-100px;
+    left: -200px;
+    width: 115%;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+/*Desktop Navbar*/
+.navbar {
+    padding: 20px;
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+    width: 100%;
+    font-size: 1.3rem;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
+    backdrop-filter: blur(15px);
+    z-index: 100;
+    position: fixed;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.08);
+}
+
+.nav-left a {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.navlink {
+    transition: 200ms;
+}
+
+
+/*Mobile Navbar*/
+.mobile-nav {
+    padding: 20px 10px 20px 10px;
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+    width: 100%;
+    color: white;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
+    backdrop-filter: blur(15px);
+    position: fixed;
+    z-index: 100;
+    visibility: hidden;
+}
+
+.mobile-left a {
+    color: white;
+    text-align: left;
+    text-decoration: none;
+    font-size: 150%;
+    padding: 10px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.05);
+}
+
+.mobile-right {
+    margin-top: 10px;
+}
+
+.mobile-right a {
+    color: white;
+    padding: 14px 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    position: relative;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.05);
+}
+
+.icon {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    margin-right: 10px;
+    padding: 10px 10px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.05);
+}
+
+#mobile-links {
+    display: none;
+}
+
+
+.mobile-right a:hover {
+    color: white;
+}
+
+.mobile-name {
+    font-size: 1.3rem;
+    color: white;
+}
+
+
+/*Examination of Conscience*/
+.eoc-container {
+    z-index: 1;
+    padding-top: 100px;
+    color:#ffffff
+}
+.accordion {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    color: #ffffff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.08);
+}
+
+.active,
+.accordion:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    max-height: 0;
+    overflow: hidden;
+    color: white;
+    transition: max-height 0.3s ease-out;
+  }
+
+.panel-text ul {
+    line-height: 1.8rem;
+    padding: 20px;
+}
+
+.panel-text p {
+    line-height: 1.8rem;
+    padding: 20px;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+/*Ten Commandments*/
+.commandment-1, .prayer-1 {
+    border-radius: 10px 10px 0px 0px;
+}
+
+#commandment-10-title {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.commandment-10-panel {
+    border-radius: 0px 0px 10px 10px;
+}
+
+/*Prayers*/
+.prayers{
+    padding-top: 50px;
+    padding-bottom: 100px;
+}

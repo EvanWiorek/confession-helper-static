@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confession Helper</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="universal-and-media.css">
+</head>
+
+<body>
+    <div class="main-container">
+
+        <!--Background Image-->
+        <img class="background-image" src="./assets/bg8.jpg" alt="bg">
+
+
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-nav">
+            <div class="mobile-left">
+                <a href="#topofpage">Confession Helper</a>
+            </div>
+            <div class="mobile-right" id="mobile-links">
+                <a href="#examination-of-conscience">Examination of Conscience</a>
+                <a href="#prayers">Prayers</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </a>
+        </div>
+
+        <!--Desktop Navbar-->
+        <div class="navbar d-flex align-items-center justify-content-between">
+            <div class="nav-left d-flex">
+                <a href="#topofpage">Confession Helper</a>
+            </div>
+            <div class="nav-right d-flex">
+                <a class="navlink" href="#examination-of-conscience" onmouseover="scale(this, 1.05)"
+                    onmouseleave="scale(this, 1)">Examination of Conscience</a>
+                <a class="navlink" href="#prayers" onmouseover="scale(this, 1.05)"
+                    onmouseleave="scale(this, 1)">Prayers</a>
+            </div>
+        </div>
+
+        <!--Examination of Conscience-->
+        <div class="eoc-container" id="examination-of-conscience">
+            <h1 class="text-center title">Examination of Conscience</h1>
+
+            <div class="ten-commandments col-lg-7 col-md-10 col-sm-10 m-auto">
+                <h2 class="title">The Ten Commandments</h2>
+                <button class="accordion commandment-1">1. I am the Lord your God. You shall not have strange gods before
+                    me.</button>
+                <div class="panel panel-text">
+                    <ul>
+                        <li>Do I give God time every day in prayer?</li>
+                        <li>Do I seek to love Him with my whole heart?</li>
+                        <li>Have I been involved with superstitious practices or have I been involved with the occult?
+                        </li>
+                        <li>Do I seek to surrender myself to God´s word as taught by the Church?</li>
+                        <li>Have I ever received communion in the state of mortal sin?</li>
+                        <li>Have I ever deliberately told a lie in Confession or have I withheld a mortal sin from the
+                            priest in Confession?</li>
+                        <li>Are there other "gods" in my life? Money, Security, Power, People, etc.?</li>
+                    </ul>
+                </div>
+                <button class="accordion">2. You shall not take the name of the Lord your God in vain.</button>
+                <div class="panel panel-text">
+                    <p>Lorem ipsum...</p>
+                </div>
+                <button class="accordion">3. Remember to keep holy the Lord´s Day.</button>
+                <div class="panel panel-text">
+                    <p>Lorem ipsum...</p>
+                </div>
+                <button class="accordion">4. Honor your father and your mother.</button>
+                <div class="panel panel-text">
+                    <p>Lorem ipsum...</p>
+                </div>
+                <button class="accordion">5. You shall not kill.</button>
+                <div class="panel panel-text">
+                    <p>Lorem ipsum...</p>
+                </div>
+                <button class="accordion">6. You shall not commit adultery.</button>
+                <div class="panel panel-text">
+                    <p>Lorem ipsum...</p>
+                </div>
+                <button class="accordion">7. You shall not steal.</button>
+                <div class="panel panel-text">
+                    <p>Lorem ipsum...</p>
+                </div>
+                <button class="accordion">8. You shall not bear false witness against your neighbor.</button>
+                <div class="panel panel-text">
+                    <p>Lorem ipsum...</p>
+                </div>
+                <button class="accordion">9. You shall not desire your neighbor´s wife.</button>
+                <div class="panel panel-text">
+                    <p>Lorem ipsum...</p>
+                </div>
+                <button class="accordion" id="commandment-10-title">10. You shall not desire your neighbor´s goods.</button>
+                <div class="panel panel-text commandment-10-panel">
+                    <p>-Am I jealous of what other people have?
+                        -Do I envy the families or possessions of others?
+                        -Am I greedy or selfish?
+                        -Are material possessions the purpose of my life?</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Prayers-->
+        <div class="prayers col-lg-7 col-md-10 col-sm-10 m-auto" id="prayers">
+            <button class="accordion prayer-1">PRAYER BEFORE CONFESSION</button>
+            <div class="panel panel-text">
+                <p>O most merciful God! Prostrate at your feet, I implore your forgiveness. I sincerely desire to leave all my evil ways and to confess my sins with all sincerity to you and to your priest. I am a sinner, have mercy on me, O Lord. Give me a lively faith and a firm hope in the Passion of my Redeemer. Give me, for your mercy´s sake a sorrow for having offended so good a God. Mary, my mother, refuge of sinners, pray for me that I may make a good confession. Amen.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
