@@ -249,10 +249,11 @@
 
     .background-image {
         animation: rotation 1000s infinite linear;
-        top:-100px;
-        left: -200px;
-        width: 300vw;
-        height: 150vh;
+        z-index: -1;
+        position: fixed;
+        top:-200px;
+        left: -400px;
+        width: 200%;
     }
 }
 

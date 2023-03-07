@@ -33,11 +33,12 @@ html {
 
 .background-image {
     animation: rotation 1500s infinite linear;
+    /* transform: rotate(300deg); */
     z-index: -1;
     position: fixed;
-    top:-100px;
-    left: -200px;
-    width: 115%;
+    top:-200px;
+    left: -400px;
+    width: 150%;
 }
 
 @keyframes rotation {
