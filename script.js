@@ -28,7 +28,7 @@ for (i = 0; i < acc.length; i++) {
     else {
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
-    if (this.classList.contains("active")) {
+    if (commandmentTenTitle.classList.contains("active")) {
       commandmentTenTitle.style = "border-radius: 0px;";
     }
     else {
