@@ -44,10 +44,9 @@ function addToConfessionList(element, item) {
   if(element.checked == true) {
     // console.log(true);
     // console.log(item)
-    confessionList.innerHTML += "<p id='"+item.id+"-on-list'>" + item.innerText + "</p>";
+    confessionList.innerHTML += "<p id='"+item.id+"-on-list'>•" + item.innerText + "</p>";
     // console.log(confessionList)
     // console.log(document.getElementById(item.id+"-on-list"))
-    // confessionListContainer.style = "backdrop-filter: blur(15px);";
   }
   else if(element.checked != true) {
     document.getElementById(item.id+"-on-list").remove();
