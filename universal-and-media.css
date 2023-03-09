@@ -51,6 +51,10 @@
     text-align: center;
 }
 
+.text-center{
+    text-align: left;
+}
+
 .gap-1 {
     gap: 1rem;
 }

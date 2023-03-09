@@ -48,7 +48,8 @@
             </div>
         </div>
 
-        <!--Examination of Conscience-->
+        <div class="body-container d-flex flex-column align-items-center">
+                    <!--Examination of Conscience-->
         <div class="eoc-container" id="examination-of-conscience">
             <h1 class="text-center title">Examination of Conscience</h1>
 
@@ -72,8 +73,8 @@
                 </div>
                 <button class="accordion">2. You shall not take the name of the Lord your God in vain.</button>
                 <div class="panel panel-text">
-                    <label class="container">
-                        <input type="checkbox">
+                    <label class="container" id="confession-item">
+                        <input type="checkbox" id="Checkbox">
                         <span class="check-text">Do I give God time every day in prayer?</span>
                         <span class="checkmark"></span>
                     </label>
@@ -123,8 +124,19 @@
 
         </div>
 
+        <!--Confession List-->
+        <div class="confession-list-container d-flex flex-column col-lg-5 col-md-10 col-sm-10">
+            <h1 class="m-auto">Confessions</h1>
+            <div class="confession-list">
+                <ul id="confession-list">
+                    <li id="list-item">Test item</li>
+                </ul>
+                <br>
+            </div>
+        </div>
+
         <!--Prayers-->
-        <div class="prayers col-lg-7 col-md-10 col-sm-10 m-auto" id="prayers">
+        <div class="prayers col-lg-6 col-md-10 col-sm-10 m-auto" id="prayers">
             <button class="accordion prayer-1">PRAYER BEFORE CONFESSION</button>
             <div class="panel panel-text">
                 <p>O most merciful God! Prostrate at your feet, I implore your forgiveness. I sincerely desire to leave
@@ -134,6 +146,10 @@
                     sinners, pray for me that I may make a good confession. Amen.</p>
             </div>
         </div>
+        </div>
+
+
+
     </div>
 
     <script src="script.js"></script>
