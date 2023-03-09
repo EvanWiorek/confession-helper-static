@@ -38,15 +38,31 @@ for (i = 0; i < acc.length; i++) {
 }
 
 //adding checked items to the confessions list
-var confessionItem = document.getElementById("confession-item");
-var listItem = document.getElementById("list-item")
-var confessionList = document.getElementById("confession-list")
-
-document.querySelector('#Checkbox').addEventListener('click', (event) => {
-  if (event.target.checked) {
-    // confessionItem.style.display = "block";
-    confessionList.innerHTML += "<li id='list-item'>Chicken Nuggets</li>";
-    listItem.innerText = confessionItem.innerText;
-    console.log("Item has been checked");
+function addToConfessionList(element, item) {
+  var confessionListContainer = document.getElementById("confession-list-container");
+  var confessionList = document.getElementById("confession-list");
+  if(element.checked == true) {
+    // console.log(true);
+    // console.log(item)
+    confessionList.innerHTML += "<p id='"+item.id+"-on-list'>" + item.innerText + "</p>";
+    // console.log(confessionList)
+    // console.log(document.getElementById(item.id+"-on-list"))
+    // confessionListContainer.style = "backdrop-filter: blur(15px);";
   }
-})
+  else if(element.checked != true) {
+    document.getElementById(item.id+"-on-list").remove();
+  }
+}
+
+  // document.getElementById('examination-of-conscience').addEventListener('click', (event) => {
+  //   for (let i = 1; i < 10; i++) {
+  //     var target = document.getElementById("Checkbox" + i);
+  //     if (target.checked == true) {
+  //       confessionList.innerHTML += "<p id='list-item'>" + confessionItem.innerText + "</p>";
+  //       console.log("Item has been checked");
+  //     }
+  //   }
+
+  // })
+
+

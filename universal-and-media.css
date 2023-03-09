@@ -168,6 +168,11 @@
         height: 150vh;
     }
 
+    .confession-list-bg {
+        background-size: 400%;
+        background-position: center;
+    }
+
 }
 
 /*tablet*/
