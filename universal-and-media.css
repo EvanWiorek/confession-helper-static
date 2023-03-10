@@ -173,6 +173,19 @@
         background-position: center;
     }
 
+    #confession-list-container h1 {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+    
+    .copy-button {
+        position: relative;
+        top: -10px;
+    }
+    
+    .tooltip .tooltiptext {
+        bottom: -90%;
+    }
 }
 
 /*tablet*/
@@ -263,6 +276,11 @@
         top:-200px;
         left: -400px;
         width: 200%;
+    }
+
+    .confession-list-bg {
+        background-size: 250%;
+        background-position: center;
     }
 }
 

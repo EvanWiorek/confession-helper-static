@@ -1,8 +1,3 @@
-//Scaling transition for desktop navbar link elements
-function scale(element, value) {
-  element.style.transform = "scale(" + value + ")";
-}
-
 //Mobile Navbar Functionality
 function mobileNav() {
   var x = document.getElementById("mobile-links");
@@ -16,6 +11,7 @@ function mobileNav() {
 //Accordian Controls
 var acc = document.getElementsByClassName("accordion");
 var commandmentTenTitle = document.getElementById("commandment-10-title")
+var lastPrayerTitle = document.getElementById("last-prayer-title")
 var i;
 
 for (i = 0; i < acc.length; i++) {
@@ -32,11 +28,18 @@ for (i = 0; i < acc.length; i++) {
       commandmentTenTitle.style = "border-radius: 0px;";
     }
     else {
-      this.style = "";
+      commandmentTenTitle.style = "border-radius: 0px 0px 10px 10px;";
+    }
+    if (lastPrayerTitle.classList.contains("active")) {
+      lastPrayerTitle.style = "border-radius: 0px;";
+    }
+    else {
+      lastPrayerTitle.style = "border-radius: 0px 0px 10px 10px;";
     }
   });
 }
 
+var tooltip = document.getElementById("myTooltip");
 var confessionList = document.getElementById("confession-list");
 
 //adding checked items to the confessions list
@@ -49,6 +52,10 @@ function addToConfessionList(element, item) {
   }
 }
 
+var toolTipContainer = document.getElementById("tooltiptext")
+var tooltip = document.getElementById("myTooltip");
+
+
 //Copy list to clipboard
 const copyContent = async () => {
   try {
@@ -57,4 +64,10 @@ const copyContent = async () => {
   catch (err) {
     console.error('Failed to copy: ', err);
   }
+  tooltip.innerText = "✓ Copied";
+}
+
+//tooltip text
+function outFunc() {
+  tooltip.innerText = "Copy List";
 }

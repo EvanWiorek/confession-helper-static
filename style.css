@@ -33,7 +33,6 @@ html {
 
 .background-image {
     animation: rotation 1500s infinite linear;
-    /* transform: rotate(300deg); */
     z-index: -1;
     position: fixed;
     top: -200px;
@@ -65,20 +64,24 @@ html {
 }
 
 .nav-left a {
-    color: white;
+    color: #dadcdd;
     font-weight: 500;
     text-decoration: none;
     font-size: 2rem;
 }
 
+.nav-left a:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
 .nav-right a {
-    color: white;
+    color: #dadcdd;
     text-decoration: none;
     margin: 10px;
 }
 
-.navlink {
-    transition: 200ms;
+.nav-right a:hover {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 
@@ -87,7 +90,7 @@ html {
     padding: 20px 10px 20px 10px;
     background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
     width: 100%;
-    color: white;
+    color: #dadcdd;
     box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
     backdrop-filter: blur(15px);
     position: fixed;
@@ -96,7 +99,7 @@ html {
 }
 
 .mobile-left a {
-    color: white;
+    color: #dadcdd;
     text-align: left;
     text-decoration: none;
     font-size: 150%;
@@ -109,7 +112,7 @@ html {
 }
 
 .mobile-right a {
-    color: white;
+    color: #dadcdd;
     padding: 14px 10px;
     text-decoration: none;
     font-size: 1.2rem;
@@ -119,7 +122,7 @@ html {
 }
 
 .icon {
-    color: white;
+    color: #dadcdd;
     text-decoration: none;
     font-size: 17px;
     display: block;
@@ -137,12 +140,12 @@ html {
 
 
 .mobile-right a:hover {
-    color: white;
+    color: #dadcdd;
 }
 
 .mobile-name {
     font-size: 1.3rem;
-    color: white;
+    color: #dadcdd;
 }
 
 
@@ -150,13 +153,13 @@ html {
 .eoc-container {
     z-index: 1;
     padding-top: 100px;
-    color: #ffffff;
+    color: #dadcdd;
 }
 
 .accordion {
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(15px);
-    color: #ffffff;
+    color: #dadcdd;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -181,11 +184,7 @@ html {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-}
-
-.panel-text ul {
-    line-height: 1.8rem;
-    padding: 20px;
+    color: #dadcdd;
 }
 
 .panel-text p {
@@ -209,11 +208,12 @@ html {
     border-radius: 10px 10px 0px 0px;
 }
 
-#commandment-10-title {
+#commandment-10-title,
+#last-prayer-title {
     border-radius: 0px 0px 10px 10px;
 }
 
-.commandment-10-panel {
+.last-panel {
     border-radius: 0px 0px 10px 10px;
 }
 
@@ -227,13 +227,11 @@ html {
 }
 
 #confession-list-container h1 {
-    color: #ffffff;
+    color: #dadcdd;
+    margin-bottom: 20px;
 }
 
 #confession-list-container {
-    /* background-color: rgba(255, 255, 255, 0.03); */
-    /* backdrop-filter: blur(15px); */
-    /* background-color: red; */
     border-radius: 10px;
     margin-top: 30px;
     padding: 20px;
@@ -245,14 +243,67 @@ html {
     line-height: 2rem;
 }
 
-.confession-list p{
-    color: #ffffff;
-    /* padding: 20px; */
+.confession-list p {
+    color: #dadcdd;
 }
 
 .copy-button {
     padding: 2px 5px;
     cursor: pointer;
+    background-color: transparent;
+    border: 0px;
+    gap: .5rem;
+}
+
+
+.copy-button img {
+    width: 20px;
+    opacity: 0.3;
+}
+
+.copy-button img:hover {
+    opacity: 0.4;
+}
+
+/*Tooltip on Copy Button*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: .8rem;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: -120%;
+    left: 180%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    backdrop-filter: blur(15px);
+}
+
+/*down pointing arrow*/
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: -39%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(255, 255, 255, 0.03) transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
 
 
@@ -272,7 +323,7 @@ html {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    color:rgb(255, 255, 255);
+    color: rgb(218, 220, 221);
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0.02);
 }
 
@@ -296,11 +347,11 @@ html {
 
 .container:hover input~.checkmark {
     background-color: rgba(255, 255, 255, 0.13);
-    color:#ffffff;
+    color: #ffffff;
 }
 
 .container:hover {
-    color:rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .container input:checked~.checkmark {
@@ -308,7 +359,7 @@ html {
 }
 
 .container input:checked~.check-text {
-    color:rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.2);
 }
 
 .checkmark:after {
@@ -331,4 +382,18 @@ html {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+
+
+
+/*Footer*/
+.footer-body {
+    background: linear-gradient(0deg, rgb(0, 0, 0, .2) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(15px);
+    color: #dadcdd;
+    width: 100%;
+    height: 100px;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.08);
 }
