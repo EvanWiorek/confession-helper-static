@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loose on Earth | Confession Helper</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="universal-and-media.css">
+</head>
+
+<body>
+    <div class="main-container" id="topofpage">
+
+        <!--Background Image-->
+        <img class="background-image" src="./assets/bg8.jpg" alt="bg">
+
+
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-nav">
+            <div class="mobile-left">
+                <a href="#topofpage">
+                    <div class="logo d-flex align-items-center gap-1">
+                        <div class="logo-left d-flex align-items-center">
+                            <img src="./assets/logo.png" alt="Loose On Earth logo">
+                        </div>
+                        <div class="logo-right">
+                            <h2>Loose On Earth</h2>
+                            <div class="logo-line"></div>
+                            <div class="logo-bottom d-flex align-items-center justify-content-around">
+                                <h6>Matthew 16:19</h6>
+                                <span class="vertical-line">†</span>
+                                <h6>Confession Helper</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="mobile-right" id="mobile-links">
+                <div class="mobile-line col-sm-11 col-md-11"></div>
+                <a href="#examination-of-conscience">Examination of Conscience</a>
+                <a href="#confession-list">Confessions</a>
+                <a href="#prayers">Prayers</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </a>
+        </div>
+
+        <!--Desktop Navbar-->
+        <div class="navbar d-flex align-items-center justify-content-between">
+            <div class="nav-left d-flex">
+                <a href="#topofpage">  
+                    <div class="logo d-flex align-items-center gap-1">
+                        <div class="logo-left d-flex align-items-center">
+                            <img src="./assets/logo.png" alt="Loose On Earth Logo">
+                        </div>
+                        <div class="logo-right">
+                            <h2>Loose On Earth</h2>
+                            <div class="logo-line"></div>
+                            <div class="logo-bottom d-flex align-items-center justify-content-around">
+                                <h6>Matthew 16:19</h6>
+                                <span class="vertical-line">†</span>
+                                <h6>Confession Helper</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-right d-flex">
+                <a class="navlink" href="#examination-of-conscience">Examination of Conscience</a>
+                <a class="navlink" href="#confession-list">Confessions</a>
+                <a class="navlink" href="#prayers">Prayers</a>
+            </div>
+        </div>
+
+        <div class="body-container d-flex flex-column align-items-center col-sm-11 flex-small m-auto">
+            <!--Examination of Conscience-->
+            <div class="eoc-container" id="examination-of-conscience">
+                <h1 class="title">Examination of Conscience</h1>
+
+                <div class="ten-commandments col-lg-7 col-md-10 m-auto">
+                    <h2 class="title">The Ten Commandments</h2>
+                    <button class="accordion commandment-1">1. I am the Lord your God. You shall not have strange gods
+                        before
+                        me.</button>
+
+                    <div class="panel panel-text">
+                        <label class="container">
+                            <input type="checkbox" onclick="addToConfessionList(this, item1)">
+                            <span class="check-text" id="item1">Do I give God time every day in prayer?</span>
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">
+                            <input type="checkbox" onclick="addToConfessionList(this, item2)">
+                            <span class="check-text" id="item2">Do I seek to love Him with my whole heart?</span>
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">
+                            <input type="checkbox" onclick="addToConfessionList(this, item3)">
+                            <span class="check-text" id="item3">Have I been involved with superstitious practices or
+                                have I been involved with the occult?</span>
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">
+                            <input type="checkbox" onclick="addToConfessionList(this, item4)">
+                            <span class="check-text" id="item4">Do I seek to surrender myself to God's word as taught by
+                                the Church?</span>
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">
+                            <input type="checkbox" onclick="addToConfessionList(this, item5)">
+                            <span class="check-text" id="item5">Have I ever received communion in the state of mortal
+                                sin?</span>
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">
+                            <input type="checkbox" onclick="addToConfessionList(this, item6)">
+                            <span class="check-text" id="item6">Have I ever deliberately told a lie in Confession or
+                                have I withheld a mortal sin from the
+                                priest in Confession?</span>
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">
+                            <input type="checkbox" onclick="addToConfessionList(this, item7)">
+                            <span class="check-text" id="item7">Are there other "gods" in my life? Money, Security,
+                                Power, People, etc.?</span>
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+
+                    <button class="accordion">2. You shall not take the name of the Lord your God in vain.</button>
+                    <div class="panel panel-text">
+
+                        <label class="container">
+                            <input type="checkbox" onclick="addToConfessionList(this, item8)">
+                            <span class="check-text" id="item8">Do I give God time every day in prayer?</span>
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">
+                            <input type="checkbox" onclick="addToConfessionList(this, item9)">
+                            <span class="check-text" id="item9">Do I seek to love Him with my whole heart?</span>
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">
+                            <input type="checkbox" onclick="addToConfessionList(this, item10)">
+                            <span class="check-text" id="item10">Have I been involved with superstitious practices or
+                                have I been involved with the occult?</span>
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">
+                            <input type="checkbox" onclick="addToConfessionList(this, item11)">
+                            <span class="check-text" id="item11">Do I seek to surrender myself to God's word as taught
+                                by the Church?</span>
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">
+                            <input type="checkbox" onclick="addToConfessionList(this, item12)">
+                            <span class="check-text" id="item12">Have I ever received communion in the state of mortal
+                                sin?</span>
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">
+                            <input type="checkbox" onclick="addToConfessionList(this, item13)">
+                            <span class="check-text" id="item13">Have I ever deliberately told a lie in Confession or
+                                have I withheld a mortal sin from the
+                                priest in Confession?</span>
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">
+                            <input type="checkbox" onclick="addToConfessionList(this, item14)">
+                            <span class="check-text" id="item14">Are there other "gods" in my life? Money, Security,
+                                Power, People, etc.?</span>
+                            <span class="checkmark"></span>
+                        </label>
+
+                    </div>
+                    <button class="accordion">3. Remember to keep holy the Lord's Day.</button>
+                    <div class="panel panel-text">
+                        <p>Lorem ipsum...</p>
+                    </div>
+                    <button class="accordion">4. Honor your father and your mother.</button>
+                    <div class="panel panel-text">
+                        <p>Lorem ipsum...</p>
+                    </div>
+                    <button class="accordion">5. You shall not kill.</button>
+                    <div class="panel panel-text">
+                        <p>Lorem ipsum...</p>
+                    </div>
+                    <button class="accordion">6. You shall not commit adultery.</button>
+                    <div class="panel panel-text">
+                        <p>Lorem ipsum...</p>
+                    </div>
+                    <button class="accordion">7. You shall not steal.</button>
+                    <div class="panel panel-text">
+                        <p>Lorem ipsum...</p>
+                    </div>
+                    <button class="accordion">8. You shall not bear false witness against your neighbor.</button>
+                    <div class="panel panel-text">
+                        <p>Lorem ipsum...</p>
+                    </div>
+                    <button class="accordion">9. You shall not desire your neighbor's wife.</button>
+                    <div class="panel panel-text">
+                        <p>Lorem ipsum...</p>
+                    </div>
+                    <button class="accordion" id="commandment-10-title">10. You shall not desire your neighbor's
+                        goods.</button>
+                    <div class="panel panel-text last-panel">
+                        <p>-Am I jealous of what other people have?
+                            -Do I envy the families or possessions of others?
+                            -Am I greedy or selfish?
+                            -Are material possessions the purpose of my life?</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--Confession List-->
+            <div class="confession-list-bg d-flex flex-column col-lg-5 col-md-9 col-sm-11"
+                id="confession-list-container">
+                <div class="title-and-copy d-flex align-items-center justify-content-center">
+                    <div class="list-title d-flex justify-content-end col-lg-8 col-md-8 col-sm-6">
+                        <h1>Confessions</h1>
+                    </div>
+                    <div class="copy-button-box d-flex justify-content-end col-lg-4 col-md-4 col-sm-6">
+                        <div class="tooltip d-flex flex-column">
+                            <button class="copy-button" onclick="copyContent()"><img src="./assets/clipboard.png"
+                                    onmouseout="outFunc()"></button>
+                            <span class="tooltiptext" id="myTooltip">Copy List</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="confession-list" id="confession-list">
+
+                </div>
+            </div>
+
+            <!--Prayers-->
+            <div class="prayers col-lg-6 col-md-10 col-sm-12 m-auto" id="prayers">
+                <button class="accordion prayer-1">Prayer Before Confession</button>
+                <div class="panel panel-text">
+                    <p>O most merciful God! Prostrate at your feet, I implore your forgiveness. I sincerely desire to
+                        leave all my evil ways and to confess my sins with all sincerity to you and to your priest. I am
+                        a
+                        sinner, have mercy on me, O Lord. Give me a lively faith and a firm hope in the Passion of my
+                        Redeemer.
+                        Give me, for your mercy's sake a sorrow for having offended so good a God.</p>
+                    <p>Mary, my mother, refuge of
+                        sinners, pray for me that I may make a good confession. Amen.</p>
+                </div>
+                <button class="accordion">An Act of Contrition</button>
+                <div class="panel panel-text">
+                    <p>Lord God, in your goodness have mercy on me: I am sorry for my sins with all my heart. In
+                        choosing to do wrong and failing to do good, I have sinned against you whom I should love above
+                        all things. Create in me a clean heart and renew within me an upright spirit. I firmly intend,
+                        with your help, to do penance, to sin no more, and to avoid whatever leads me to sin. Our Savior
+                        Jesus Christ suffered and died for us. In His name, my God, have mercy. Amen.</p>
+                </div>
+                <button class="accordion">Prayer After Holy Communion</button>
+                <div class="panel panel-text">
+                    <p>Dear Lord, help me to remove from my mind every thought or opinion which You would not sanction,
+                        every feeling form my heart which You would not approve. Grant that I may spend the hours of the
+                        day gladly working with You according to Your will. Help me just for today and be with me in it.
+                    </p>
+                    <p>In the long hours of work, that I may not grow weary or slack in serving You. In conversations,
+                        that they may not be to me occasions of uncharitableness. In the day's worries and
+                        disappointments, that I may be patient with myself and with those around me. In moments of
+                        fatigue and illness, that I may be mindful of others rather than of myself.</p>
+                    <p>In temptations, that I may be generous and loyal, so that when the day is over I may lay it at
+                        Your feet, with its successes which are all Yours, and its failures which are all my own, and
+                        feel that life is real and peaceful, and blessed when spent with You as the Guest of my soul.
+                        Amen.</p>
+                </div>
+                <button class="accordion" id="last-prayer-title">Prayer to Overcome Anger</button>
+                <div class="panel panel-text last-panel">
+                    <p>O Lord, I am sorry that anger rises so often in my heart. Many times I feel disappointed in
+                        myself, yet even worse I offend You. Without Your help I will never win this battle with rage.
+                        But Your word says that "I have the strength for everything through Christ who empowers me."</p>
+                    <p>Help me to pray, to look to You, to take a step back and calm down. I repent of holding on to
+                        anger and giving the devil a foothold in my life and relationships. I am determined to follow
+                        Your Word, until You have renewed my mind, giving me the mind of Christ - a mind at peace with
+                        God, with myself, and with others.</p>
+                    <p>Shape my being into earnest kindness, a reflection of Your perfection. Grant me the grace of
+                        self-control, that I may not display unjust anger. In times when I feel anger surging again,
+                        please remind me of these things.</p>
+                    <p>In the name of the Father, the Son and the Holy Spirit. Amen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-body">
+                <div class="footer-text"></div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

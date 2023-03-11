@@ -1,7 +1,7 @@
 /*universal classes*/
 .m-auto {
     margin: auto;
-  }
+}
 
 .d-flex {
     display: flex;
@@ -9,7 +9,7 @@
 
 .flex-column {
     flex-direction: column;
-  }
+}
 
 .justify-content-start {
     justify-content: flex-start;
@@ -47,11 +47,11 @@
     align-items: center;
 }
 
-.text-center{
+.text-center {
     text-align: center;
 }
 
-.text-center{
+.text-center {
     text-align: left;
 }
 
@@ -162,7 +162,7 @@
 
     .background-image {
         animation: rotation 800s infinite linear;
-        top:-100px;
+        top: -100px;
         left: -200px;
         width: 300vw;
         height: 150vh;
@@ -177,15 +177,36 @@
         font-size: 1.5rem;
         text-align: left;
     }
-    
-    .copy-button {
-        position: relative;
-        top: -10px;
-    }
-    
+
     .tooltip .tooltiptext {
         bottom: -90%;
     }
+    
+    .logo img {
+        width: 40px;
+        height: revert;
+    }
+    
+    .logo h2 {
+        font-size: 1.3rem;
+    }
+    
+    .logo h6 {
+        font-size: .6rem;
+    }
+    
+    .vertical-line {
+        font-size: .8rem;
+    }
+
+    .eoc-container {
+        padding-top: 110px;
+    }
+
+    .logo {
+        padding-left: 7px;
+    }
+
 }
 
 /*tablet*/
@@ -273,7 +294,7 @@
         animation: rotation 1000s infinite linear;
         z-index: -1;
         position: fixed;
-        top:-200px;
+        top: -200px;
         left: -400px;
         width: 200%;
     }
@@ -281,6 +302,30 @@
     .confession-list-bg {
         background-size: 250%;
         background-position: center;
+    }
+
+    .icon {
+        top: 30px;
+    }
+
+    .logo {
+        padding-left: 7px;
+    }
+    
+    .logo h2 {
+        font-size: 2rem;
+    }
+    
+    .logo h6 {
+        font-size: .9rem;
+    }
+
+    .eoc-container {
+        padding-top: 110px;
+    }
+
+    .eoc-container {
+        padding-top: 130px;
     }
 }
 
@@ -344,4 +389,18 @@
         flex: 0 0 auto;
         width: 100%;
     }
+
+    .active,
+    .accordion:hover {
+        background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .logo:hover {
+        opacity: .8;
+    }
+
+    .nav-right a:hover {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
 }
