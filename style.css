@@ -131,7 +131,7 @@ html {
     color: #dadcdd;
     text-align: left;
     text-decoration: none;
-    padding: 10px; 
+    padding: 10px;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0.05);
 }
 
@@ -264,13 +264,38 @@ input::placeholder {
     color: rgba(255, 255, 255, 0.2);
 }
 
-input[type=text]:focus, textarea:focus {
+input[type=text]:focus,
+textarea:focus {
     box-shadow: 0 0 5px rgb(78, 117, 127);
     padding: 3px 0px 3px 3px;
     margin: 5px 1px 3px 0px;
     outline: 1px solid rgba(255, 255, 255, 0.05);
     /* border: 1px solid rgb(255, 0, 0); */
-  }
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    height: 15px;
+    width: 15px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 0%;
+    margin-right: 10px;
+    transform: translateY(1px);
+}
+
+
+input[type="radio"]:checked {
+    background-image: url("./assets/checkmark.png");
+    background-size: contain;
+}
+
+input[type="radio"]:focus {
+    box-shadow: 0 0 5px rgb(78, 117, 127);
+}
 
 /*Ten Commandments*/
 .commandment-1,
@@ -467,8 +492,6 @@ input[type=text]:focus, textarea:focus {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-
-
 
 
 /*Footer*/
