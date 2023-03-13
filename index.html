@@ -92,21 +92,25 @@
             <!--Examination of Conscience-->
             <div class="eoc-container" id="examination-of-conscience">
                 <h1 class="title">Examination of Conscience</h1>
-
                 <div class="time-since-container col-lg-5 col-md-9 col-sm-11 m-auto d-flex flex-column">
                     <h3>How long has it been since your last confession?</h3>
-                    <div class="option-1">
-                        <input type="radio" id="custom-time" name="time-since"
-                            onclick="beforeListAdd(this, customTime)">
-                        <label for="custom-time"><input type="text" id="customTime"
-                                placeholder="2 weeks, 1 month, 6 months, a year, etc..."
-                                oninput="customTimeSentence()"></label>
+                    <div class="body-container-line"></div>
+                    <div class="options">
+                        <div class="option-1">
+                            <input type="radio" id="custom-time" name="time-since"
+                                onclick="beforeListAdd(this, customTime)">
+                            <label for="custom-time"><input type="text" id="customTime"
+                                    placeholder="2 weeks, 1 month, 6 months, a year, etc..."
+                                    oninput="customTimeSentence()"></label>
+                        </div>
+                        <div class="option-2">
+                            <input type="radio" id="first-time" name="time-since"
+                                onclick="beforeListAdd(this, firstTime)">
+                            <label for="first-time"><span class="check-text" id="firstTime">This will be my first
+                                    confession.</span></label>
+                        </div>
                     </div>
-                    <div class="option-2">
-                        <input type="radio" id="first-time" name="time-since" onclick="beforeListAdd(this, firstTime)">
-                        <label for="first-time"><span class="check-text" id="firstTime">This will be my first
-                                confession.</span></label>
-                    </div>
+
                 </div>
 
                 <div class="ten-commandments col-lg-7 col-md-10 m-auto">
@@ -342,6 +346,8 @@
                         </div>
                     </div>
                 </div>
+                <div class="confessions-line"></div>
+
 
                 <div id="complete-list">
 

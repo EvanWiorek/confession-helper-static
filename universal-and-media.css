@@ -168,6 +168,10 @@
         height: 150vh;
     }
 
+    .accordion {
+        font-size: 1.1rem;
+    }
+
     .confession-list-bg {
         background-size: 400%;
         background-position: center;
@@ -211,6 +215,26 @@
         min-width: 200px;
         max-width: 200px;
         text-overflow: ellipsis;
+        font-size: 1rem;
+    }
+
+    .body-container-line {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .confessions-line {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .time-since-container {
+        line-height: revert;
+        font-size: 1rem;
+    }
+
+    .options {
+        line-height: 2.5rem;
     }
 
 }
