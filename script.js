@@ -39,27 +39,45 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-var tooltip = document.getElementById("myTooltip");
-var confessionList = document.getElementById("confession-list");
 
 //adding checked items to the confessions list
+var confessionList = document.getElementById("confession-list");
+var completeList = document.getElementById("complete-list");
+var beforeList = document.getElementById("before-list");
+var afterList = document.getElementById("after-list");
+var customTime = document.getElementById("customTime");
+
+function customTimeSentence() {
+  beforeList.innerHTML = "<p id='before-list-sentence'>Forgive me, Father, for I have sinned. It has been " + customTime.value + " since my last confession.</p>"
+}
+
+function beforeListAdd(element, beforeId) {
+  if (element.checked == true) {
+    if (beforeId.id == "firstTime") {
+      beforeList.innerHTML = "<p id='before-list-sentence'>Forgive me, Father, for I have sinned. This is my first confession.</p>"
+    }
+    else if (beforeId.id == "customTime"){
+      beforeList.innerHTML = "<p id='before-list-sentence'>Forgive me, Father, for I have sinned. It has been " + customTime.value + " since my last confession.</p>"
+    }
+  }
+}
+
 function addToConfessionList(element, item) {
   if (element.checked == true) {
     confessionList.innerHTML += "<p id='" + item.id + "-on-list'>- " + item.innerText + "</p>";
   }
-  else if (element.checked != true) {
+  else {
     document.getElementById(item.id + "-on-list").remove();
   }
 }
 
-var toolTipContainer = document.getElementById("tooltiptext")
-var tooltip = document.getElementById("myTooltip");
-
 
 //Copy list to clipboard
+var tooltip = document.getElementById("myTooltip");
+
 const copyContent = async () => {
   try {
-    await navigator.clipboard.writeText(confessionList.innerText);
+    await navigator.clipboard.writeText(completeList.innerText);
   } 
   catch (err) {
     console.error('Failed to copy: ', err);
