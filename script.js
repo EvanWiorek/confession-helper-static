@@ -40,37 +40,65 @@ for (i = 0; i < acc.length; i++) {
 }
 
 
-//adding checked items to the confessions list
 var confessionList = document.getElementById("confession-list");
 var completeList = document.getElementById("complete-list");
 var beforeList = document.getElementById("before-list");
 var afterList = document.getElementById("after-list");
 var customTime = document.getElementById("customTime");
+var radiobtn = document.getElementById("custom-time");
+var customConfession = document.getElementById("customConfession")
 
+//time since last confession functions
 function customTimeSentence() {
-  beforeList.innerHTML = "<p id='before-list-sentence'>Forgive me, Father, for I have sinned. It has been " + customTime.value + " since my last confession.</p>"
+  var customTimeValue = customTime.value
+  var lowercaseValue = customTimeValue.toLowerCase()
+  beforeList.innerHTML = "<p id='before-list-sentence'>Forgive me, Father, for I have sinned. It has been " + lowercaseValue + " since my last confession.</p>";
+  radiobtn.checked = true;
+}
+
+function customTimeClick() {
+  var customTimeValue = customTime.value
+  var lowercaseValue = customTimeValue.toLowerCase()
+  beforeList.innerHTML = "<p id='before-list-sentence'>Forgive me, Father, for I have sinned. It has been " + lowercaseValue + " since my last confession.</p>";
+  radiobtn.checked = true;
 }
 
 function beforeListAdd(element, beforeId) {
   if (element.checked == true) {
     if (beforeId.id == "firstTime") {
-      beforeList.innerHTML = "<p id='before-list-sentence'>Forgive me, Father, for I have sinned. This is my first confession.</p>"
+      beforeList.innerHTML = "<p id='before-list-sentence'>Forgive me, Father, for I have sinned. This is my first confession.</p>";
     }
     else if (beforeId.id == "customTime"){
-      beforeList.innerHTML = "<p id='before-list-sentence'>Forgive me, Father, for I have sinned. It has been " + customTime.value + " since my last confession.</p>"
+      beforeList.innerHTML = "<p id='before-list-sentence'>Forgive me, Father, for I have sinned. It has been " + customTime.value + " since my last confession.</p>";
     }
   }
 }
 
+//adding checked items to the confessions list
 function addToConfessionList(element, item) {
+  afterList.innerHTML = "<p>I am sorry for these and any sins I may be forgetting.</p>";
   if (element.checked == true) {
     confessionList.innerHTML += "<p id='" + item.id + "-on-list'>- " + item.innerText + "</p>";
   }
   else {
     document.getElementById(item.id + "-on-list").remove();
   }
+  if (confessionList.innerText == "") {
+    afterList.style = "display: none;"
+  }
+  else if (confessionList.innerText != "") {
+    afterList.style = "display: block;";
+  }
 }
 
+//adding custom sins to the list
+function customConfessionSentence() {
+  confessionList.innerHTML += "<p class='custom-confession' onclick='removeFromList(this)'>- " + customConfession.value + "</p>";
+}
+
+function removeFromList(element) {
+  element.remove();
+}
 
 //Copy list to clipboard
 var tooltip = document.getElementById("myTooltip");

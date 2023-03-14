@@ -221,13 +221,13 @@ html {
 }
 
 .title {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
 /*Time since last confession*/
-.time-since-container {
+.card-body {
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(15px);
     padding: 18px;
@@ -247,7 +247,7 @@ html {
     margin-bottom: 10px;
 }
 
-#customTime {
+#customTime, #customConfession {
     padding: 5px 10px;
     min-height: 30px;
     max-height: 30px;
@@ -266,11 +266,10 @@ input::placeholder {
 
 input[type=text]:focus,
 textarea:focus {
-    box-shadow: 0 0 5px rgb(78, 117, 127);
+    box-shadow: 0 0 5px rgba(129, 230, 255, .5);
     padding: 3px 0px 3px 3px;
     margin: 5px 1px 3px 0px;
     outline: 1px solid rgba(255, 255, 255, 0.05);
-    /* border: 1px solid rgb(255, 0, 0); */
 }
 
 input[type="radio"] {
@@ -285,17 +284,34 @@ input[type="radio"] {
     border-radius: 0%;
     margin-right: 10px;
     transform: translateY(1px);
+    cursor: pointer;
+}
+
+#firstTime {
+    cursor: pointer;
 }
 
 
 input[type="radio"]:checked {
     background-image: url("./assets/checkmark.png");
-    background-size: contain;
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.08);
 }
 
-input[type="radio"]:focus {
-    box-shadow: 0 0 5px rgb(78, 117, 127);
+input[type="radio"]:hover {
+    background-color: rgba(255, 255, 255, 0.12);
 }
+
+#firstTime:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#customTime:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
 
 /*Ten Commandments*/
 .commandment-1,
@@ -310,8 +326,85 @@ input[type="radio"]:focus {
 
 .last-panel {
     border-radius: 0px 0px 10px 10px;
+    margin-bottom: 40px;
 }
 
+
+/*Add to list*/
+.add-to-list-container {
+    color: #dadcdd;
+    text-align: center;
+}
+
+
+#customConfession {
+    min-width: 500px;
+    max-width: 500px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.add-to-list-button {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: #dadcdd;
+    background-color: rgba(47,57,63,1);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-bottom: 10px;
+}
+
+.add-to-list-button:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      rgba(27,62,75, .4),
+      rgba(27, 109, 156, 0.4),
+      rgba(27,62,75, .4)
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 30s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .add-to-list-button:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47,57,63,.1);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
 
 /*Confessions List*/
 .confession-list-bg {
@@ -320,6 +413,7 @@ input[type="radio"]:focus {
     background-position: top;
     background-attachment: fixed;
 }
+
 
 .title-and-copy {
     margin-bottom: 10px;
@@ -339,7 +433,7 @@ input[type="radio"]:focus {
 
 #confession-list-container {
     border-radius: 10px;
-    margin-top: 30px;
+    margin-top: 40px;
     padding: 20px;
     height: auto;
     box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
@@ -356,6 +450,10 @@ input[type="radio"]:focus {
 #before-list {
     color: #dadcdd;
     margin-bottom: 20px;
+}
+
+.custom-confession {
+    cursor: pointer;
 }
 
 .copy-button {
@@ -416,6 +514,11 @@ input[type="radio"]:focus {
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+}
+
+#after-list {
+    color: #dadcdd;
+    margin-top: 20px;
 }
 
 

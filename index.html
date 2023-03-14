@@ -92,7 +92,7 @@
             <!--Examination of Conscience-->
             <div class="eoc-container" id="examination-of-conscience">
                 <h1 class="title">Examination of Conscience</h1>
-                <div class="time-since-container col-lg-5 col-md-9 col-sm-11 m-auto d-flex flex-column">
+                <div class="card-body col-lg-5 col-md-9 col-sm-11 m-auto d-flex flex-column">
                     <h3>How long has it been since your last confession?</h3>
                     <div class="body-container-line"></div>
                     <div class="options">
@@ -101,12 +101,12 @@
                                 onclick="beforeListAdd(this, customTime)">
                             <label for="custom-time"><input type="text" id="customTime"
                                     placeholder="2 weeks, 1 month, 6 months, a year, etc..."
-                                    oninput="customTimeSentence()" class="radio-form"></label>
+                                    oninput="customTimeSentence()" onclick="customTimeClick()"></label>
                         </div>
                         <div class="option-2">
                             <input type="radio" id="first-time" name="time-since"
                                 onclick="beforeListAdd(this, firstTime)">
-                            <label for="first-time"><span class="check-text radio-form" id="firstTime">This will be my first
+                            <label for="first-time"><span id="firstTime">This will be my first
                                     confession.</span></label>
                         </div>
                     </div>
@@ -136,7 +136,8 @@
 
                         <label class="container">
                             <input type="checkbox" onclick="addToConfessionList(this, item3)">
-                            <span class="check-text" id="item3">I've been involved with superstitious practices or with the occult (palm-reading, fortune-telling, etc)</span>
+                            <span class="check-text" id="item3">I've been involved with superstitious practices or with
+                                the occult (palm-reading, fortune-telling, etc)</span>
                             <span class="checkmark"></span>
                         </label>
 
@@ -330,6 +331,17 @@
 
             </div>
 
+            <!--Add to List button-->
+            <div class="card-body add-to-list-container col-lg-5 col-md-9 col-sm-11 m-auto">
+                <h4>Any confessions that weren't on the list? Add them here:</h4>
+                <div class="body-container-line"></div>
+                <input type="text" id="customConfession" placeholder="I have...">
+                <br>
+                <button class="add-to-list-button" onclick="customConfessionSentence()">Add to list</button>
+                <div class="body-container-line"></div>
+                <h5>To remove a confession from the list, click on the item below.</h5>
+            </div>
+
             <!--Confession List-->
             <div class="confession-list-bg d-flex flex-column col-lg-5 col-md-9 col-sm-11"
                 id="confession-list-container">
@@ -346,24 +358,15 @@
                     </div>
                 </div>
                 <div class="confessions-line"></div>
-
-
+                <!--Everything that gets copied on copy button click-->
                 <div id="complete-list">
-
-                    <div id="before-list">
-
-                    </div>
-
-                    <div class="confession-list" id="confession-list">
-
-                    </div>
-
-                    <div id="after-list">
-
-                    </div>
+                    <!--Time since last confession-->
+                    <div id="before-list"></div>
+                    <!--Checkbox confessions-->
+                    <div class="confession-list" id="confession-list"></div>
+                    <!--Custom input confessions-->
+                    <div id="after-list"></div>
                 </div>
-
-
             </div>
 
             <!--Prayers-->
