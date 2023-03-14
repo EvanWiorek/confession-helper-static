@@ -208,6 +208,7 @@ html {
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     color: #dadcdd;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
 }
 
 .panel-text p {
@@ -220,10 +221,32 @@ html {
     margin-left: 8px;
 }
 
-.title {
-    margin-top: 30px;
+
+.eoc-title {
     margin-bottom: 30px;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    padding: 18px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
+    text-shadow: 5px 5px 10px black;
+}
+
+.tenc-title {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
+    text-shadow: 5px 5px 10px black;
 }
 
 /*Time since last confession*/
@@ -291,7 +314,6 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-
 input[type="radio"]:checked {
     background-image: url("./assets/checkmark.png");
     background-size: 90%;
@@ -332,13 +354,11 @@ input[type="radio"]:hover {
     margin-bottom: 40px;
 }
 
-
 /*Add to list*/
 .add-to-list-container {
     color: #dadcdd;
     text-align: center;
 }
-
 
 #customConfession {
     min-width: 500px;
@@ -353,7 +373,6 @@ input[type="radio"]:hover {
     box-shadow: 0 0 5px rgba(129, 230, 255, .5),
         0 0 15px rgba(129, 230, 255, .4);
 }
-
 
 .add-to-list-button {
     padding: 10px 15px;
@@ -377,13 +396,16 @@ input[type="radio"]:hover {
 }
 
 /*Confessions List*/
+#confessions-list-jump-point {
+    scroll-margin-top: 9rem;
+}
+
 .confession-list-bg {
     background-image: url("./assets/bg8-blur.jpg");
     background-size: 100%;
     background-position: top;
     background-attachment: fixed;
 }
-
 
 .title-and-copy {
     margin-bottom: 10px;
@@ -434,8 +456,6 @@ input[type="radio"]:hover {
     gap: .5rem;
     position: relative;
 }
-
-
 
 .copy-button img {
     width: 20px;
@@ -494,8 +514,36 @@ input[type="radio"]:hover {
 
 
 /*Prayers*/
-.prayers {
-    padding-top: 50px;
+.prayers-and-guide-title {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #dadcdd;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    padding: 18px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
+    text-shadow: 5px 5px 10px black;
+}
+
+.prayers-title {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #dadcdd;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
+    text-shadow: 5px 5px 10px black;
+}
+
+.prayers-and-guide-container {
     padding-bottom: 100px;
 }
 
