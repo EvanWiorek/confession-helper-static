@@ -312,7 +312,7 @@ input[type="radio"]:hover {
     color: rgba(255, 255, 255, 0.6);
     outline: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: 0 0 5px rgba(129, 230, 255, .5),
-        0 0 25px rgba(129, 230, 255, .5);
+        0 0 15px rgba(129, 230, 255, .5);
 }
 
 
@@ -351,7 +351,7 @@ input[type="radio"]:hover {
     color: rgba(255, 255, 255, 0.6);
     outline: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: 0 0 5px rgba(129, 230, 255, .5),
-        0 0 25px rgba(129, 230, 255, .5);
+        0 0 15px rgba(129, 230, 255, .4);
 }
 
 
@@ -373,8 +373,7 @@ input[type="radio"]:hover {
 .add-to-list-button:hover {
     outline: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: 0 0 5px rgba(129, 230, 255, .5),
-        0 0 25px rgba(129, 230, 255, .5),
-        0 0 50px rgba(129, 230, 255, .5);
+        0 0 15px rgba(129, 230, 255, .5);
 }
 
 /*Confessions List*/
@@ -435,6 +434,7 @@ input[type="radio"]:hover {
     gap: .5rem;
     position: relative;
 }
+
 
 
 .copy-button img {
