@@ -102,8 +102,19 @@ function removeFromList(element) {
 
 //Copy list to clipboard
 var tooltip = document.getElementById("myTooltip");
+var prayerSpan = document.getElementById("prayerCopy")
 
-const copyContent = async () => {
+const copyConfessionList = async () => {
+  try {
+    await navigator.clipboard.writeText(completeList.innerText);
+  } 
+  catch (err) {
+    console.error('Failed to copy: ', err);
+  }
+  tooltip.innerText = "✓ Copied";
+}
+
+const copyPrayer = async () => {
   try {
     await navigator.clipboard.writeText(completeList.innerText);
   } 
@@ -118,8 +129,13 @@ function outFunc() {
   tooltip.innerText = "Copy List";
 }
 
-// function displayPrayerCopyButton(this) {
+// function displayPrayerCopyButton(element) {
+//   prayerSpan.style = "display: flex;"
+// }
 
+// function hidePrayerCopyButton(element) {
+//   prayerSpan.style = "transition: ease-out 2s;"
+//   prayerSpan.style = "display: none;"
 // }
 
 

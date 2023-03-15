@@ -50,7 +50,6 @@ html {
     }
 }
 
-
 /*Desktop Navbar*/
 .navbar {
     padding: 20px;
@@ -99,7 +98,6 @@ html {
     text-decoration: none;
     font-size: 1.6rem;
 }
-
 
 .nav-right a {
     color: #dadcdd;
@@ -167,7 +165,6 @@ html {
     display: none;
 }
 
-
 .mobile-right a:hover {
     color: #dadcdd;
 }
@@ -176,7 +173,6 @@ html {
     font-size: 1.3rem;
     color: #dadcdd;
 }
-
 
 /*Examination of Conscience*/
 .eoc-container {
@@ -457,10 +453,6 @@ input[type="radio"]:hover {
 }
 
 .confession-list-bg {
-    /* background-image: url("./assets/bg8-blur.jpg");
-    background-size: 100%;
-    background-position: top;
-    background-attachment: fixed; */
     background-color: rgba(255, 255, 255, 0.01);
     backdrop-filter: blur(15px);
 }
@@ -506,64 +498,6 @@ input[type="radio"]:hover {
     cursor: pointer;
 }
 
-.copy-button {
-    padding: 2px 5px;
-    cursor: pointer;
-    background-color: transparent;
-    border: 0px;
-    gap: .5rem;
-    position: relative;
-}
-
-.copy-button img {
-    width: 20px;
-    opacity: 0.3;
-}
-
-.copy-button img:hover {
-    opacity: 0.4;
-}
-
-/*Tooltip on Copy Button*/
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    background-color: rgba(255, 255, 255, 0.03);
-    color: rgba(255, 255, 255, 0.5);
-    font-size: .8rem;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: -120%;
-    left: 180%;
-    margin-left: -75px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    backdrop-filter: blur(15px);
-}
-
-/*down pointing arrow*/
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: -39%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent rgba(255, 255, 255, 0.03) transparent;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
 
 #after-list {
     color: #dadcdd;
@@ -595,56 +529,6 @@ input[type="radio"]:hover {
 .prayers-and-guide-container {
     margin-bottom: 70px;
 }
-
-.prayer-copy-button {
-    background-color: transparent;
-    border: 0px;
-    transform: translateX(5px) translateY(5px);
-    position: relative;
-    z-index: 2;
-}
-
-.prayer-copy-button-span {
-    /* display: none; */
-    display: flex;
-    color: #dadcdd;
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    transform: translateX(-28px) translateY(2px);
-    z-index: 2;
-    background-color: rgba(255, 255, 255, 0.03);
-
-}
-
-.prayer-copy-button img:hover {
-    opacity: 0.4;
-}
-
-
-.prayer-copy-button img {
-    width: 20px;
-    opacity: 0.3;
-    cursor: pointer;
-}
-
-/* .prayer-copy-button-box {
-    padding: 2px 5px;
-    cursor: pointer;
-    background-color: transparent;
-    border: 0px;
-    gap: .5rem;
-    position: relative;
-}
-
-.prayer-copy-button-box img {
-    width: 20px;
-    opacity: 0.3;
-}
-
-.prayer-copy-button-box img:hover {
-    opacity: 0.4;
-} */
 
 /*Footer*/
 .footer-body {
