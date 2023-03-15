@@ -117,3 +117,10 @@ const copyContent = async () => {
 function outFunc() {
   tooltip.innerText = "Copy List";
 }
+
+// function displayPrayerCopyButton(this) {
+
+// }
+
+
+// " onmouseout="hidePrayerCopyButton(this)"

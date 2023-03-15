@@ -199,6 +199,7 @@ html {
     box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0.08);
     font-size: 1.2rem;
+    z-index: 1;
 }
 
 .panel {
@@ -594,6 +595,56 @@ input[type="radio"]:hover {
 .prayers-and-guide-container {
     margin-bottom: 70px;
 }
+
+.prayer-copy-button {
+    background-color: transparent;
+    border: 0px;
+    transform: translateX(5px) translateY(5px);
+    position: relative;
+    z-index: 2;
+}
+
+.prayer-copy-button-span {
+    /* display: none; */
+    display: flex;
+    color: #dadcdd;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform: translateX(-28px) translateY(2px);
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.03);
+
+}
+
+.prayer-copy-button img:hover {
+    opacity: 0.4;
+}
+
+
+.prayer-copy-button img {
+    width: 20px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+/* .prayer-copy-button-box {
+    padding: 2px 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0px;
+    gap: .5rem;
+    position: relative;
+}
+
+.prayer-copy-button-box img {
+    width: 20px;
+    opacity: 0.3;
+}
+
+.prayer-copy-button-box img:hover {
+    opacity: 0.4;
+} */
 
 /*Footer*/
 .footer-body {
