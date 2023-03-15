@@ -50,6 +50,7 @@ html {
     }
 }
 
+
 /*Desktop Navbar*/
 .navbar {
     padding: 20px;
@@ -185,7 +186,7 @@ html {
 }
 
 .accordion {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.025);
     backdrop-filter: blur(15px);
     color: #dadcdd;
     cursor: pointer;
@@ -197,12 +198,12 @@ html {
     transition: 0.4s;
     box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0.08);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .panel {
     padding: 0 18px;
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(15px);
     max-height: 0;
     overflow: hidden;
@@ -226,14 +227,14 @@ html {
     margin-top: 10px;
     margin-bottom: 30px;
     text-align: center;
-    text-shadow: 5px 5px 10px black;
+    text-shadow: 5px 5px 5px rgba(0,0,0, .6);
 }
 
 .tenc-title {
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
-    text-shadow: 5px 5px 10px black;
+    text-shadow: 5px 5px 5px rgba(0,0,0, .6);
 }
 
 /*Time since last confession*/
@@ -339,6 +340,73 @@ input[type="radio"]:hover {
 .last-panel {
     border-radius: 0px 0px 10px 10px;
     margin-bottom: 40px;
+}
+
+/*Checklist Items*/
+.container {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: rgb(218, 220, 221);
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 33px;
+    left: -5px;
+    height: 15px;
+    width: 15px;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.container:hover input~.checkmark {
+    background-color: rgba(255, 255, 255, 0.13);
+    color: #ffffff;
+}
+
+
+.container input:checked~.checkmark {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.container input:checked~.check-text {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 5.5px;
+    top: 2.5px;
+    width: 2.5px;
+    height: 5px;
+    border: solid rgba(255, 255, 255, 0.15);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 /*Add to list*/
@@ -500,7 +568,7 @@ input[type="radio"]:hover {
 }
 
 
-/*Prayers*/
+/*Prayers and Confession Guide*/
 .prayers-and-guide-container {
     margin-top: 50px;
 }
@@ -510,87 +578,20 @@ input[type="radio"]:hover {
     margin-bottom: 20px;
     text-align: center;
     color: #dadcdd;
-    text-shadow: 5px 5px 10px black;
+    text-shadow: 5px 5px 5px rgba(0,0,0, .6);
 }
 
-.prayers-title {
+.prayers-title, .guide-title {
     margin-bottom: 10px;
     text-align: center;
     color: #dadcdd;
-    text-shadow: 5px 5px 10px black;
+    text-shadow: 5px 5px 5px rgba(0,0,0, .6);
 }
 
 .prayers-and-guide-container {
     margin-bottom: 70px;
 }
 
-
-/*Checklist Items*/
-.container {
-    display: flex;
-    position: relative;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    color: rgb(218, 220, 221);
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.02);
-}
-
-/* Hide the browser's default checkbox */
-.container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.checkmark {
-    position: absolute;
-    top: 22px;
-    left: -5px;
-    height: 15px;
-    width: 15px;
-    background-color: rgba(255, 255, 255, 0.08);
-}
-
-.container:hover input~.checkmark {
-    background-color: rgba(255, 255, 255, 0.13);
-    color: #ffffff;
-}
-
-
-.container input:checked~.checkmark {
-    background-color: rgba(255, 255, 255, 0.08);
-}
-
-.container input:checked~.check-text {
-    color: rgba(255, 255, 255, 0.2);
-}
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.container input:checked~.checkmark:after {
-    display: block;
-}
-
-.container .checkmark:after {
-    left: 5.5px;
-    top: 2.5px;
-    width: 2.5px;
-    height: 5px;
-    border: solid rgba(255, 255, 255, 0.15);
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
 
 
 /*Footer*/
