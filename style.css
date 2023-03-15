@@ -227,14 +227,14 @@ html {
     margin-top: 10px;
     margin-bottom: 30px;
     text-align: center;
-    text-shadow: 5px 5px 5px rgba(0,0,0, .6);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .6);
 }
 
 .tenc-title {
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
-    text-shadow: 5px 5px 5px rgba(0,0,0, .6);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .6);
 }
 
 /*Time since last confession*/
@@ -343,7 +343,7 @@ input[type="radio"]:hover {
 }
 
 /*Checklist Items*/
-.container {
+.check-item-container {
     display: flex;
     position: relative;
     cursor: pointer;
@@ -356,7 +356,7 @@ input[type="radio"]:hover {
 }
 
 /* Hide the browser's default checkbox */
-.container input {
+.check-item-container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -373,17 +373,17 @@ input[type="radio"]:hover {
     background-color: rgba(255, 255, 255, 0.08);
 }
 
-.container:hover input~.checkmark {
+.check-item-container:hover input~.checkmark {
     background-color: rgba(255, 255, 255, 0.13);
     color: #ffffff;
 }
 
 
-.container input:checked~.checkmark {
+.check-item-container input:checked~.checkmark {
     background-color: rgba(255, 255, 255, 0.08);
 }
 
-.container input:checked~.check-text {
+.check-item-container input:checked~.check-text {
     color: rgba(255, 255, 255, 0.2);
 }
 
@@ -393,11 +393,11 @@ input[type="radio"]:hover {
     display: none;
 }
 
-.container input:checked~.checkmark:after {
+.check-item-container input:checked~.checkmark:after {
     display: block;
 }
 
-.container .checkmark:after {
+.check-item-container .checkmark:after {
     left: 5.5px;
     top: 2.5px;
     width: 2.5px;
@@ -456,10 +456,12 @@ input[type="radio"]:hover {
 }
 
 .confession-list-bg {
-    background-image: url("./assets/bg8-blur.jpg");
+    /* background-image: url("./assets/bg8-blur.jpg");
     background-size: 100%;
     background-position: top;
-    background-attachment: fixed;
+    background-attachment: fixed; */
+    background-color: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(15px);
 }
 
 .title-and-copy {
@@ -578,21 +580,20 @@ input[type="radio"]:hover {
     margin-bottom: 20px;
     text-align: center;
     color: #dadcdd;
-    text-shadow: 5px 5px 5px rgba(0,0,0, .6);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .6);
 }
 
-.prayers-title, .guide-title {
+.prayers-title,
+.guide-title {
     margin-bottom: 10px;
     text-align: center;
     color: #dadcdd;
-    text-shadow: 5px 5px 5px rgba(0,0,0, .6);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .6);
 }
 
 .prayers-and-guide-container {
     margin-bottom: 70px;
 }
-
-
 
 /*Footer*/
 .footer-body {
