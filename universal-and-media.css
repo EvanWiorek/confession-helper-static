@@ -4,6 +4,10 @@
     margin-right: auto;
 }
 
+.m-bottom {
+    margin-bottom: 10px;
+}
+
 .d-flex {
     display: flex;
 }
@@ -83,6 +87,7 @@
 .gap-7 {
     gap: 7rem;
 }
+
 
 /*Phone Screen*/
 @media only screen and (min-width: 240px) and (max-width: 767px) {
@@ -430,9 +435,8 @@
         width: 100%;
     }
 
-    .active,
     .accordion:hover {
-        background-color: rgba(255, 255, 255, 0.08);
+        background-color: rgba(255, 255, 255, 0.06);
     }
 
     .logo:hover {

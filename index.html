@@ -98,8 +98,8 @@
 
                     <!--Time since last confession-->
                     <div class="time-since-last-container m-auto">
-                        <h3>How long has it been since your last confession?</h3>
-                        <div class="body-container-line"></div>
+                        <h3 class="m-bottom">How long has it been since your last confession?</h3>
+                        <div class="body-container-line m-bottom"></div>
                         <div class="options">
                             <div class="option-1">
                                 <input type="radio" id="custom-time" name="time-since"
@@ -129,6 +129,7 @@
 
                         <div class="panel panel-text">
                             <p>Check all that apply:</p>
+                            <div class="body-container-line"></div>
                             <label class="check-item-container">
                                 <input type="checkbox" onclick="addToConfessionList(this, item1)">
                                 <span class="check-text" id="item1">I failed to give God enough of my time in
@@ -260,64 +261,162 @@
 
                             <label class="check-item-container">
                                 <input type="checkbox" onclick="addToConfessionList(this, item17)">
-                                <span class="check-text" id="item17">Do I give God time every day in prayer?</span>
+                                <span class="check-text" id="item17">I failed to try my best to fulfill my promises to God</span>
                                 <span class="checkmark"></span>
                             </label>
 
                             <label class="check-item-container">
                                 <input type="checkbox" onclick="addToConfessionList(this, item18)">
-                                <span class="check-text" id="item18">Do I seek to love Him with my whole heart?</span>
+                                <span class="check-text" id="item18">I used foul language</span>
                                 <span class="checkmark"></span>
                             </label>
 
                             <label class="check-item-container">
                                 <input type="checkbox" onclick="addToConfessionList(this, item19)">
-                                <span class="check-text" id="item19">Have I been involved with superstitious practices
-                                    or
-                                    have I been involved with the occult?</span>
+                                <span class="check-text" id="item19">I used the Lord's name in vain, either jokingly, angrily, or in any irreverent way</span>
                                 <span class="checkmark"></span>
                             </label>
 
                             <label class="check-item-container">
                                 <input type="checkbox" onclick="addToConfessionList(this, item20)">
-                                <span class="check-text" id="item20">Do I seek to surrender myself to God's word as
-                                    taught
-                                    by the Church?</span>
+                                <span class="check-text" id="item20">I insulted God</span>
                                 <span class="checkmark"></span>
                             </label>
 
+
+                        </div>
+                        <button class="accordion">3. Remember to keep holy the Lord's Day.</button>
+                        <div class="panel panel-text">
                             <label class="check-item-container">
                                 <input type="checkbox" onclick="addToConfessionList(this, item21)">
-                                <span class="check-text" id="item21">Have I ever received communion in the state of
-                                    mortal
-                                    sin?</span>
+                                <span class="check-text" id="item21">I skipped mass on a Sunday</span>
                                 <span class="checkmark"></span>
                             </label>
 
                             <label class="check-item-container">
                                 <input type="checkbox" onclick="addToConfessionList(this, item22)">
-                                <span class="check-text" id="item22">Have I ever deliberately told a lie in Confession
-                                    or
-                                    have I withheld a mortal sin from the
-                                    priest in Confession?</span>
+                                <span class="check-text" id="item22">I skipped mass on a holy day of obligation</span>
                                 <span class="checkmark"></span>
                             </label>
 
                             <label class="check-item-container">
                                 <input type="checkbox" onclick="addToConfessionList(this, item23)">
-                                <span class="check-text" id="item23">Are there other "gods" in my life? Money, Security,
-                                    Power, People, etc.?</span>
+                                <span class="check-text" id="item23">I often arrive to mass late or leave early</span>
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="check-item-container">
+                                <input type="checkbox" onclick="addToConfessionList(this, item24)">
+                                <span class="check-text" id="item24">I was too busy to rest and spend with my family on Sunday</span>
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="check-item-container">
+                                <input type="checkbox" onclick="addToConfessionList(this, item25)">
+                                <span class="check-text" id="item25">I failed to fast on Ash Wednesday and Good Friday</span>
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="check-item-container">
+                                <input type="checkbox" onclick="addToConfessionList(this, item26)">
+                                <span class="check-text" id="item26">I failed to receive the Eucharist at least once during Easter</span>
                                 <span class="checkmark"></span>
                             </label>
 
                         </div>
-                        <button class="accordion">3. Remember to keep holy the Lord's Day.</button>
-                        <div class="panel panel-text">
-                            <p>Lorem ipsum...</p>
-                        </div>
                         <button class="accordion">4. Honor your father and your mother.</button>
                         <div class="panel panel-text">
-                            <p>Lorem ipsum...</p>
+                            <p>For Parents:</p>
+                            <div class="body-container-line"></div>
+
+                            <label class="check-item-container">
+                                <input type="checkbox" onclick="addToConfessionList(this, item27)">
+                                <span class="check-text" id="item27">I failed to teach my children their prayers, send them to church, or give them a Christian education</span>
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="check-item-container">
+                                <input type="checkbox" onclick="addToConfessionList(this, item28)">
+                                <span class="check-text" id="item28">I set a bad example for my children</span>
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="check-item-container">
+                                <input type="checkbox" onclick="addToConfessionList(this, item29)">
+                                <span class="check-text" id="item29">I neglected my family</span>
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="check-item-container">
+                                <input type="checkbox" onclick="addToConfessionList(this, item30)">
+                                <span class="check-text" id="item30">I neglected to watch over my children, monitor their companions, and the media they partake in (books, movies shows, social media, etc)</span>
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="check-item-container">
+                                <input type="checkbox" onclick="addToConfessionList(this, item31)">
+                                <span class="check-text" id="item31">I failed to see to it that my child made their First Confession and First Communion</span>
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="check-item-container">
+                                <input type="checkbox" onclick="addToConfessionList(this, item32)">
+                                <span class="check-text" id="item32">I failed to see to it that my children have received the sacrament of Confirmation</span>
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="check-item-container">
+                                <input type="checkbox" onclick="addToConfessionList(this, item33)">
+                                <span class="check-text" id="item33">I failed to care for my elderly relatives</span>
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="check-item-container">
+                                <input type="checkbox" onclick="addToConfessionList(this, item34)">
+                                <span class="check-text" id="item34">I failed to teach my children about their human sexuality</span>
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="check-item-container">
+                                <input type="checkbox" onclick="addToConfessionList(this, item35)">
+                                <span class="check-text" id="item35">I've broken a just law</span>
+                                <span class="checkmark"></span>
+                            </label>
+                            <div class="body-container-line"></div>
+
+                            <p>For Children:</p>
+                            <div class="body-container-line"></div>
+
+                            <label class="check-item-container">
+                                <input type="checkbox" onclick="addToConfessionList(this, item36)">
+                                <span class="check-text" id="item36">I've been disobedient toward my parents</span>
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="check-item-container">
+                                <input type="checkbox" onclick="addToConfessionList(this, item37)">
+                                <span class="check-text" id="item37">I neglected to help my parents when my help was needed</span>
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="check-item-container">
+                                <input type="checkbox" onclick="addToConfessionList(this, item38)">
+                                <span class="check-text" id="item38">I've shown my parents little affection or respect</span>
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="check-item-container">
+                                <input type="checkbox" onclick="addToConfessionList(this, item39)">
+                                <span class="check-text" id="item39">I reacted in spite when corrected by my parents</span>
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="check-item-container">
+                                <input type="checkbox" onclick="addToConfessionList(this, item40)">
+                                <span class="check-text" id="item40">I failed to do my chores</span>
+                                <span class="checkmark"></span>
+                            </label>
+
                         </div>
                         <button class="accordion">5. You shall not kill.</button>
                         <div class="panel panel-text">
