@@ -213,8 +213,8 @@
     }
     
     #customTime {
-        min-width: 200px;
-        max-width: 200px;
+        min-width: 275px;
+        max-width: 275px;
         text-overflow: ellipsis;
         font-size: 1rem;
     }

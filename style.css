@@ -15,6 +15,7 @@ body {
 
 html {
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.08);
 }
 
 *::-webkit-scrollbar {
@@ -264,11 +265,27 @@ html {
     max-width: 400px;
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 5px;
-    color: #dadcdd;
     border-color: rgba(255, 255, 255, 0.05);
+    color: #dadcdd;
     font-size: 1.1rem;
     transition: 0.5s;
+    outline: 1px solid rgba(255, 255, 255, 0.05);
+
 }
+
+#customTime:hover {
+    box-shadow: 0 0 5px rgba(129, 230, 255, .5),
+        0 0 15px rgba(129, 230, 255, .5);
+}
+
+#firstTime {
+    cursor: pointer;
+}
+
+#firstTime:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
 
 input::placeholder {
     color: rgba(255, 255, 255, 0.2);
@@ -286,17 +303,21 @@ input[type="radio"] {
     margin: 0;
     font: inherit;
     color: currentColor;
-    height: 15px;
-    width: 15px;
-    background-color: rgba(255, 255, 255, 0.08);
-    border-radius: 0%;
+    height: 18px;
+    width: 18px;
+    background-color: rgba(255, 255, 255, 0.05);
     margin-right: 10px;
-    transform: translateY(1px);
+    transform: translateY(3px);
     cursor: pointer;
+    border: 3px solid;
+    border-color: rgba(255, 255, 255, 0.03);
+    outline: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.2s;
 }
 
-#firstTime {
-    cursor: pointer;
+input[type=radio]:focus {
+    box-shadow: 0 0 5px rgba(129, 230, 255, .5);
+    outline: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 input[type="radio"]:checked {
@@ -304,22 +325,12 @@ input[type="radio"]:checked {
     background-size: 90%;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.08);
 }
 
 input[type="radio"]:hover {
-    background-color: rgba(255, 255, 255, 0.12);
-}
-
-#firstTime:hover {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-#customTime:hover {
-    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 5px rgba(129, 230, 255, .5);
     outline: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 0 5px rgba(129, 230, 255, .5),
-        0 0 15px rgba(129, 230, 255, .5);
 }
 
 
@@ -363,21 +374,29 @@ input[type="radio"]:hover {
 
 .checkmark {
     position: absolute;
-    top: 33px;
+    top: 30px;
     left: -5px;
-    height: 15px;
-    width: 15px;
-    background-color: rgba(255, 255, 255, 0.08);
+    height: 18px;
+    width: 18px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 3px solid;
+    border-color: rgba(255, 255, 255, 0.03);
+    transition: 0.2s;
+    outline: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .check-item-container:hover input~.checkmark {
-    background-color: rgba(255, 255, 255, 0.13);
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 5px rgba(129, 230, 255, .5);
+    outline: 1px solid rgba(255, 255, 255, 0.05);
     color: #ffffff;
 }
 
 
 .check-item-container input:checked~.checkmark {
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: rgba(255, 255, 255, 0.03);
+    outline: 1px solid rgba(255, 255, 255, 0.03);
+    background-color: rgba(255, 255, 255, 0.03);
 }
 
 .check-item-container input:checked~.check-text {
@@ -395,8 +414,8 @@ input[type="radio"]:hover {
 }
 
 .check-item-container .checkmark:after {
-    left: 5.5px;
-    top: 2.5px;
+    left: 4.5px;
+    top: 2px;
     width: 2.5px;
     height: 5px;
     border: solid rgba(255, 255, 255, 0.15);
@@ -405,6 +424,7 @@ input[type="radio"]:hover {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+
 
 /*Add to list*/
 .add-to-list-container {
@@ -459,6 +479,7 @@ input[type="radio"]:hover {
 
 .title-and-copy {
     margin-bottom: 10px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .6);
 }
 
 #confession-list-container h1 {
@@ -504,6 +525,64 @@ input[type="radio"]:hover {
     margin-top: 20px;
 }
 
+/*Confession Copy Button*/
+.copy-button {
+    padding: 2px 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0px;
+    gap: .5rem;
+    position: relative;
+}
+
+.copy-button img {
+    width: 20px;
+    opacity: 0.3;
+}
+
+.copy-button img:hover {
+    opacity: 0.4;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: .8rem;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: -120%;
+    left: 180%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    backdrop-filter: blur(15px);
+}
+
+/*down pointing arrow*/
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: -39%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(255, 255, 255, 0.03) transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
 
 /*Prayers and Confession Guide*/
 .prayers-and-guide-container {
