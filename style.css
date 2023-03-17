@@ -89,6 +89,31 @@ html {
     z-index: 1;
 }
 
+.transition-1 {
+    transition: max-height .64s ease-out;
+}
+
+.transition-2 {
+    transition: max-height 0.27s ease-out;
+}
+
+.transition-3 {
+    transition: max-height 0.35s ease-out;
+}
+
+.transition-4 {
+    transition: max-height 0.45s ease-out;
+}
+
+.transition-5 {
+    transition: max-height 0.40s ease-out;
+}
+
+.transition-6 {
+    transition: max-height 0.2s ease-out;
+}
+
+
 .active {
     background-color: rgba(255, 255, 255, 0.05);
 }
@@ -99,7 +124,7 @@ html {
     backdrop-filter: blur(15px);
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    /* transition: max-height 0.3s ease-out; */
     color: #dadcdd;
     box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
 }
@@ -613,6 +638,10 @@ input[type="radio"]:hover {
 
 .prayers-and-guide-container {
     margin-bottom: 70px;
+}
+
+.guide-body {
+    color: #dadcdd;
 }
 
 /*Footer*/
