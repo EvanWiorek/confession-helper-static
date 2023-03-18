@@ -151,6 +151,10 @@ html {
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0.08);
 }
 
+.logo {
+    transition: 0.2s;
+}
+
 .logo img {
     width: 70px;
     height: revert;
@@ -191,6 +195,7 @@ html {
     color: #dadcdd;
     text-decoration: none;
     margin: 10px;
+    transition: 0.2s;
 }
 
 /*Mobile Navbar*/
@@ -647,17 +652,55 @@ input[type="radio"]:hover {
 
 /*Footer*/
 .footer-body {
-    background: linear-gradient(0deg, rgb(0, 0, 0, .2) 0%, rgba(255, 255, 255, 0) 130%);
+    padding: 110px 0px;
+    background: linear-gradient(0deg, rgb(0, 0, 0, .3) 0%, rgba(255, 255, 255, 0) 130%);
     backdrop-filter: blur(15px);
     color: #dadcdd;
     width: 100%;
-    height: 100px;
+    height: 200px;
     box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0.08);
 }
 
-.footer-text {
-    color: rgba(255,255,255,.5);
+.line-and-links {
+    margin-bottom: 20px;
+}
+
+.footer-container {
+    height: 100%;
+}
+
+.footer-text p {
+    color: rgba(56, 93, 106, .7);
     text-align: center;
-    padding-top: 70px;
+    font-size: .8rem;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.footer-text-bottom p {
+    color: rgba(56, 93, 106, .7);
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.footer-line-1 {
+    width: 100%;
+    height: .1px;
+    background-color: rgba(56, 93, 106, .7);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.contact-svg {
+    filter: invert(29%) sepia(49%) saturate(358%) hue-rotate(149deg) brightness(101%) contrast(90%);
+    opacity: .7;
+    width: 30px;
+}
+
+.contact-svg:hover {
+    opacity: .4;
+    transition: 0.2s;
 }

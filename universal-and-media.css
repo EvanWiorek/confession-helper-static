@@ -263,6 +263,10 @@
         left: 180%;
     }
 
+    .footer-body {
+        padding: 150px 0px;
+    }
+
 }
 
 /*tablet*/
@@ -383,6 +387,14 @@
     .eoc-container {
         padding-top: 130px;
     }
+
+    .footer-container {
+        height: 100%;
+    }
+
+    .footer-body {
+        padding: 120px 0px;
+    }
 }
 
 /*desktop*/
@@ -451,7 +463,7 @@
     }
 
     .logo:hover {
-        opacity: .8;
+        opacity: .7;
     }
 
     .nav-right a:hover {
