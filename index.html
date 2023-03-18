@@ -49,6 +49,7 @@
                 <a href="#examination-of-conscience">Examination of Conscience</a>
                 <a href="#confessions-list-jump-point">Confessions</a>
                 <a href="#prayers">Prayers</a>
+                <a class="navlink" href="#confessionGuide">Guide</a>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list"
@@ -79,10 +80,11 @@
                     </div>
                 </a>
             </div>
-            <div class="nav-right d-flex">
-                <a class="navlink" href="#examination-of-conscience">Examination of Conscience</a>
-                <a class="navlink" href="#confessions-list-jump-point">Confessions</a>
-                <a class="navlink" href="#prayers">Prayers</a>
+            <div class="nav-right d-flex align-items-center">
+                <a class="navlink" href="#examination-of-conscience">Examination of Conscience</a>|
+                <a class="navlink" href="#confessions-list-jump-point">Confessions</a>|
+                <a class="navlink" href="#prayers">Prayers</a>|
+                <a class="navlink" href="#confessionGuide">Guide</a>
             </div>
         </div>
 
@@ -764,7 +766,7 @@
 
                 <div class="prayers-container">
                     <h2 id="prayers" class="prayers-title">Prayers</h2>
-                    <button class="accordion prayer-1">Prayer Before Confession</button>
+                    <button class="accordion prayer-1 beforeConfessionPrayer" id="beforeConfessionPrayer">Prayer Before Confession</button>
                     <div class="panel transition-6">
                         <div class="prayer-panel-text-container">
                             <p>O most merciful God! Prostrate at your feet, I implore your forgiveness. I sincerely
@@ -781,7 +783,7 @@
 
                     </div>
 
-                    <button class="accordion">An Act of Contrition</button>
+                    <button class="accordion actOfContrition" id="actOfContrition">An Act of Contrition</button>
                     <div class="panel transition-6">
                         <div class="prayer-panel-text-container">
                             <p>Lord God, in your goodness have mercy on me: I am sorry for my sins with all my heart. In
@@ -794,7 +796,7 @@
                                 Jesus Christ suffered and died for us. In His name, my God, have mercy. Amen.</p>
                         </div>
                     </div>
-                    <button class="accordion">Prayer of Absolution (Spoken by the Priest)</button>
+                    <button class="accordion absolutionPrayer" id="absolutionPrayer">Prayer of Absolution (Spoken by the Priest)</button>
                     <div class="panel transition-6">
                         <div class="prayer-panel-text-container">
                             <p>God the father of mercies through the death and resurrection of his Son as reconciled the world to himself and the sent the Holy Spirit among us for the forgiveness of sins. Through the ministry of the Church may God give you pardon and peace and I absolve you from your sins in the name of the Father, and of the Son, and of the Holy Spirit. Amen.</p>
@@ -854,32 +856,37 @@
                 </div>
 
                 <div class="guide-container">
-                    <h2 id="guide" class="guide-title">Confession Guide</h2>
+                    <h2 id="confessionGuide" class="guide-title">Confession Guide</h2>
                     <div class="guide-body">
                         <div class="guide-text m-auto">
                             <h3>How to Make a Good Confession</h3>
                             <p>Confession is not difficult, but it does require preparation. We should begin with prayer, placing ourselves in the presence of God, our loving Father. We seek healing and forgiveness through repentance and a resolve to sin no more. Then we review our lives since our last confession, searching our thoughts, words and actions for that which did not conform to God's command to love Him and one another through His laws and the laws of His Church. This is called an examination of conscience.</p>
                             <br>
-                            <h3>To make an examination of conscience:</h3>
+                            <h3>How to use this app to examine your conscience:</h3>
                             <ul>
-                                <li>Begin with a prayer asking for God's help.</li>
+                                <li>Prepare yourself for confession - begin with a <a href="#beforeConfessionPrayer" onclick="openPrayerPanel(beforeConfessionPrayer)">prayer asking for God's help</a>.</li>
                                 <li>Go through the <a href="#">Examination of Conscience section</a>, and select all that apply.</li>
-                                <li>Tell God how truly sorry you are for your sins.</li>
-                                <li>Make a firm resolution not to sin again.</li>
+                                <li>Copy the list with the copy button, and paste it into your phone's notes app. Now you're ready!</li>
                             </ul>
                             <br>
-                            <h3>During Confession</h3>
-                            <h4>The Sacrament of Reconciliation involves four steps:</h4>
+                            <h3>How to Go to Confession: A Step by Step Guide</h3>
                             <ol>
-                                <li><span>Confession</span>: Naming our sins—aloud—to the priest, who represents Christ and the Church.</li>
-                                <li><span>Contrition</span>: A sincere sorrow for having offended God, and the most important act of the person confessing. There can be no forgiveness of sin if we do not have sorrow and a firm resolve not to repeat our sin. This app has an <a href="#">example of an act of contrition prayer</a>.</li>
-                                <li><span>Penance</span>: The prayers — or sometimes, the good deeds — the priest gives, for our healing and the healing of those we have hurt by our sins.</li>
-                                <li><span>Absolution</span>: The words the priest speaks by which God, the Father of mercies reconciles us to himself through his death and resurrection, called the <a href="#">Prayer of Absolution</a>.</li>
+                                <li><h4>Enter the confessional and greet the priest.</h4>The priest represents Christ and the Church. Begin by making the sign of the cross and say the <a href="#confessions-list-jump-point">first line on the list</a>: “Forgive me, Father ... since my last confession.”</li>
+
+                                <li><h4>List your sins.</h4>Read through the list of sins that you created from above. Try to be thorough, but it's OK if you don't remember every single sin. It may be more of a conversation, as the priest may ask questions or comment. It doesn't have to be a non-stop laundry list of sins. When you're done, conclude with the <a href="#confessions-list-jump-point">last line on the list</a>: “I am sorry for these and any sins I may be forgetting.”</li>
+
+                                <li><h4>Listen to the priest.</h4>When you're done confessing your sins, the priest may offer some guidance and suggest ways to avoid sins in the future. He'll then give you a penance, which could be a form of prayer a service or some work of mercy, for our healing and the healing of those we have hurt by our sins.</li>
+
+                                <li><h4>Pray the <a href="#actOfContrition" onclick="openPrayerPanel(actOfContrition)">Act of Contrition</a>.</h4>This can be recited from a <a href="#actOfContrition" onclick="openPrayerPanel(actOfContrition)">written prayer</a>, or made with your own words. Keep in mind, this is the most important part of a confession. There can be no forgiveness of sin if we truly do not feel sorry nor have a firm resolve not to repeat our sin.</li>
+
+                                <li><h4>Receive absolution from God, via the priest.</h4>The priest will then say the <a href="#absolutionPrayer" onclick="openPrayerPanel(absolutionPrayer)">Absolution Prayer</a>. Make the sign of the cross and close with Amen.</li>
+
+                                <li><h4>Depart and fulfill your act of penance.</h4></li>
                             </ol>
 
                         </div>
                         <br>
-                        <p class="source">Some parts of this text is borrowed from the <a href="https://www.archindy.org/thelightison/guide.html#:~:text=Going%20to%20Confession&text=Choose%20the%20option%20that%20is,your%20sins%20to%20the%20priest.">Archdiocese of Indianapolis</a>.</p>
+                        <p class="source">Some parts of this text are borrowed from the <a href="https://www.archindy.org/thelightison/guide.html">Archdiocese of Indianapolis</a> and from the Catholic App, <a href="https://hallow.com/blog/how-to-go-to-confession-the-sacrament-of-penance-reconciliation/#step-by-step-guide">Hallow</a>.</p>
                     </div>
                 </div>
 

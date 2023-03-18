@@ -39,6 +39,17 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+function openPrayerPanel(element) {
+  element.classList.toggle("active");
+  var panel = element.nextElementSibling;
+  if (panel.style.maxHeight) {
+    panel.style.maxHeight = null;
+  }
+  else {
+    panel.style.maxHeight = panel.scrollHeight + "px";
+  }
+}
+
 
 var confessionList = document.getElementById("confession-list");
 var completeList = document.getElementById("complete-list");
