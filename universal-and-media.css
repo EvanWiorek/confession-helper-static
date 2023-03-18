@@ -183,9 +183,10 @@
         background-position: center;
     }
 
-    #confession-list-container h1 {
-        font-size: 1.5rem;
-        text-align: left;
+    .list-title {
+        color: #dadcdd;
+        /* font-size: 1.5rem; */
+        margin-left: 10px;
     }
 
     .tooltip .tooltiptext {
@@ -210,7 +211,7 @@
     }
 
     .eoc-container {
-        padding-top: 110px;
+        padding-top: 120px;
     }
 
     .logo {
@@ -250,6 +251,16 @@
 
     .add-to-list-container {
         line-height: 1.2rem;
+    }
+
+    .tooltip .tooltiptext::after {
+        top: -35%;
+        left: 50%;
+    }
+
+    .tooltip .tooltiptext {
+        bottom: -120%;
+        left: 180%;
     }
 
 }
