@@ -628,7 +628,6 @@ input[type="radio"]:hover {
 
 .prayer-panel-text-container {
     padding: 20px 5px;
-    text-align: justify;
 }
 
 
@@ -665,7 +664,7 @@ input[type="radio"]:hover {
 }
 
 .guide-text {
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 .guide-text p {
