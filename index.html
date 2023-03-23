@@ -13,9 +13,7 @@
     <meta property="og:url" content="https://loose-on-earth.com/" />
     <meta property="og:image" content="https://i.imgur.com/UdhQSaC.png" />
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    <!-- <link rel="stylesheet" href="dark-mode.css" class="dark-mode"> -->
-    <!-- <link rel="stylesheet" href="light-mode.css" class="light-mode"> -->
-    <link id="theme" rel="stylesheet" type="text/css" href="light.css" />
+    <link id="theme" rel="stylesheet" type="text/css" href="dark.css" />
     <link rel="stylesheet" href="universal-and-media.css">
 </head>
 
@@ -23,8 +21,9 @@
     <div class="main-container" id="topofpage">
 
         <!--Background Image-->
-        <img class="background-image" src="./assets/dark-bg.jpg" alt="bg" id="background-dark">
         <img class="background-image" src="./assets/light-bg.jpg" alt="bg" id="background-light">
+        <img class="background-image" src="./assets/dark-bg.jpg" alt="bg" id="background-dark">
+
 
 
         <!-- Mobile Navigation Menu -->
@@ -98,9 +97,9 @@
                 <div class="card-body">
                     <!-- <h3>Setup</h3> -->
                     <div class="switch-and-label d-flex align-items-center gap-2">
-                        <span id="mode-name">Light Mode</span>
+                        <span id="mode-name">Dark Mode</span>
                         <label class="switch">
-                            <input type="checkbox" onclick="toggleTheme()" checked>
+                            <input type="checkbox" onclick="toggleTheme()">
                             <span class="slider round"></span>
                         </label>
                     </div>

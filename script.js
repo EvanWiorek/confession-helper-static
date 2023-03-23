@@ -147,15 +147,17 @@ function toggleTheme() {
   var backgroundDark = document.getElementById("background-dark");
   var backgroundLight = document.getElementById("background-light");
   var modeName = document.getElementById("mode-name")
-  if (theme.getAttribute('href') == 'light.css') {
-    theme.setAttribute('href', 'dark.css');
-    backgroundLight.style = "display: none;";
-    backgroundDark.style = "display: block;";
-    modeName.innerText = "Dark Mode";
-  } else {
+  if (theme.getAttribute('href') == 'dark.css') {
     theme.setAttribute('href', 'light.css');
     backgroundLight.style = "display: block;";
     backgroundDark.style = "display: none;";
     modeName.innerText = "Light Mode";
+  } else {
+    theme.setAttribute('href', 'dark.css');
+    backgroundLight.style = "display: none;";
+    backgroundDark.style = "display: block;";
+    modeName.innerText = "Dark Mode";
   }
 }
+
+

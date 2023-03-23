@@ -41,6 +41,10 @@ html {
     width: 150%;
 }
 
+#background-light {
+    display: none;
+}
+
 @keyframes rotation {
     from {
         transform: rotate(0deg);
