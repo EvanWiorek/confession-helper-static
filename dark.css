@@ -581,8 +581,18 @@ input[type="radio"]:hover {
 }
 
 /*Confessions List*/
-#confessions-list-jump-point, #beforeConfessionPrayer, #actOfContrition, #absolutionPrayer {
+#beforeConfessionPrayer,
+#actOfContrition,
+#absolutionPrayer {
     scroll-margin-top: 12rem;
+}
+
+#examination-of-conscience {
+    scroll-margin-top: 6rem;
+}
+
+#confessions-list-jump-point {
+    scroll-margin-top: 10rem;
 }
 
 #confessionGuide {
