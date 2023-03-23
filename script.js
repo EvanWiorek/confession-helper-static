@@ -79,7 +79,7 @@ function beforeListAdd(element, beforeId) {
     if (beforeId.id == "firstTime") {
       beforeList.innerHTML = "<p id='before-list-sentence'>Forgive me, Father, for I have sinned. This is my first confession.</p>";
     }
-    else if (beforeId.id == "customTime"){
+    else if (beforeId.id == "customTime") {
       beforeList.innerHTML = "<p id='before-list-sentence'>Forgive me, Father, for I have sinned. It has been " + customTime.value + " since my last confession.</p>";
     }
   }
@@ -118,7 +118,7 @@ var prayerSpan = document.getElementById("prayerCopy")
 const copyConfessionList = async () => {
   try {
     await navigator.clipboard.writeText(completeList.innerText);
-  } 
+  }
   catch (err) {
     console.error('Failed to copy: ', err);
   }
@@ -128,7 +128,7 @@ const copyConfessionList = async () => {
 const copyPrayer = async () => {
   try {
     await navigator.clipboard.writeText(completeList.innerText);
-  } 
+  }
   catch (err) {
     console.error('Failed to copy: ', err);
   }
@@ -140,14 +140,22 @@ function outFunc() {
   tooltip.innerText = "Copy List";
 }
 
-// function displayPrayerCopyButton(element) {
-//   prayerSpan.style = "display: flex;"
-// }
 
-// function hidePrayerCopyButton(element) {
-//   prayerSpan.style = "transition: ease-out 2s;"
-//   prayerSpan.style = "display: none;"
-// }
-
-
-// " onmouseout="hidePrayerCopyButton(this)"
+//light mode/dark mode
+function toggleTheme() {
+  var theme = document.getElementById("theme");
+  var backgroundDark = document.getElementById("background-dark");
+  var backgroundLight = document.getElementById("background-light");
+  var modeName = document.getElementById("mode-name")
+  if (theme.getAttribute('href') == 'light.css') {
+    theme.setAttribute('href', 'dark.css');
+    backgroundLight.style = "display: none;";
+    backgroundDark.style = "display: block;";
+    modeName.innerText = "Dark Mode";
+  } else {
+    theme.setAttribute('href', 'light.css');
+    backgroundLight.style = "display: block;";
+    backgroundDark.style = "display: none;";
+    modeName.innerText = "Light Mode";
+  }
+}

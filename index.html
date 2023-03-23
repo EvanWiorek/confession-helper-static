@@ -13,7 +13,9 @@
     <meta property="og:url" content="https://loose-on-earth.com/" />
     <meta property="og:image" content="https://i.imgur.com/UdhQSaC.png" />
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="dark-mode.css" class="dark-mode"> -->
+    <!-- <link rel="stylesheet" href="light-mode.css" class="light-mode"> -->
+    <link id="theme" rel="stylesheet" type="text/css" href="light.css" />
     <link rel="stylesheet" href="universal-and-media.css">
 </head>
 
@@ -21,7 +23,8 @@
     <div class="main-container" id="topofpage">
 
         <!--Background Image-->
-        <img class="background-image" src="./assets/bg8.jpg" alt="bg">
+        <img class="background-image" src="./assets/dark-bg.jpg" alt="bg" id="background-dark">
+        <img class="background-image" src="./assets/light-bg.jpg" alt="bg" id="background-light">
 
 
         <!-- Mobile Navigation Menu -->
@@ -91,8 +94,20 @@
         <!--webpage body-->
         <div class="body-container d-flex flex-column align-items-center col-sm-12 m-auto">
 
-            <!--Examination of Conscience-->
+            <div class="setup">
+                <div class="card-body">
+                    <!-- <h3>Setup</h3> -->
+                    <div class="switch-and-label d-flex align-items-center gap-2">
+                        <span id="mode-name">Light Mode</span>
+                        <label class="switch">
+                            <input type="checkbox" onclick="toggleTheme()" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
 
+            <!--Examination of Conscience-->
             <div class="eoc-container" id="examination-of-conscience">
                 <div class="card-body col-lg-6 col-md-9 col-sm-11 m-auto d-flex flex-column">
                     <h1 class="eoc-title">Examination of Conscience</h1>
@@ -766,7 +781,8 @@
 
                 <div class="prayers-container">
                     <h2 id="prayers" class="prayers-title">Prayers</h2>
-                    <button class="accordion prayer-1 beforeConfessionPrayer" id="beforeConfessionPrayer">Prayer Before Confession</button>
+                    <button class="accordion prayer-1 beforeConfessionPrayer" id="beforeConfessionPrayer">Prayer Before
+                        Confession</button>
                     <div class="panel transition-6">
                         <div class="prayer-panel-text-container">
                             <p>O most merciful God! Prostrate at your feet, I implore your forgiveness. I sincerely
@@ -776,7 +792,7 @@
                                 in the Passion
                                 of my Redeemer. Give me, for your mercy's sake a sorrow for having offended so good a
                                 God.</p>
-                                <br>
+                            <br>
                             <p>Mary, my mother, refuge of sinners, pray for me that I may make a good confession. Amen.
                             </p>
                         </div>
@@ -787,19 +803,26 @@
                     <div class="panel transition-6">
                         <div class="prayer-panel-text-container">
                             <p>Lord God, in your goodness have mercy on me: I am sorry for my sins with all my heart. In
-                                choosing to do wrong and failing to do good, I have sinned against you whom I should love
+                                choosing to do wrong and failing to do good, I have sinned against you whom I should
+                                love
                                 above
                                 all things. Create in me a clean heart and renew within me an upright spirit. I firmly
                                 intend,
-                                with your help, to do penance, to sin no more, and to avoid whatever leads me to sin. Our
+                                with your help, to do penance, to sin no more, and to avoid whatever leads me to sin.
+                                Our
                                 Savior
                                 Jesus Christ suffered and died for us. In His name, my God, have mercy. Amen.</p>
                         </div>
                     </div>
-                    <button class="accordion absolutionPrayer" id="absolutionPrayer">Prayer of Absolution (Spoken by the Priest)</button>
+                    <button class="accordion absolutionPrayer" id="absolutionPrayer">Prayer of Absolution (Spoken by the
+                        Priest)</button>
                     <div class="panel transition-6">
                         <div class="prayer-panel-text-container">
-                            <p>God the father of mercies through the death and resurrection of his Son as reconciled the world to himself and the sent the Holy Spirit among us for the forgiveness of sins. Through the ministry of the Church may God give you pardon and peace and I absolve you from your sins in the name of the Father, and of the Son, and of the Holy Spirit. Amen.</p>
+                            <p>God the father of mercies through the death and resurrection of his Son as reconciled the
+                                world to himself and the sent the Holy Spirit among us for the forgiveness of sins.
+                                Through the ministry of the Church may God give you pardon and peace and I absolve you
+                                from your sins in the name of the Father, and of the Son, and of the Holy Spirit. Amen.
+                            </p>
                         </div>
                     </div>
                     <button class="accordion">Prayer After Holy Communion</button>
@@ -807,21 +830,26 @@
                         <div class="prayer-panel-text-container">
                             <p>Dear Lord, help me to remove from my mind every thought or opinion which You would not
                                 sanction,
-                                every feeling form my heart which You would not approve. Grant that I may spend the hours of
+                                every feeling form my heart which You would not approve. Grant that I may spend the
+                                hours of
                                 the
-                                day gladly working with You according to Your will. Help me just for today and be with me in
+                                day gladly working with You according to Your will. Help me just for today and be with
+                                me in
                                 it.
                             </p>
                             <br>
                             <p>In the long hours of work, that I may not grow weary or slack in serving You. In
                                 conversations,
                                 that they may not be to me occasions of uncharitableness. In the day's worries and
-                                disappointments, that I may be patient with myself and with those around me. In moments of
+                                disappointments, that I may be patient with myself and with those around me. In moments
+                                of
                                 fatigue and illness, that I may be mindful of others rather than of myself.</p>
-                                <br>
-                            <p>In temptations, that I may be generous and loyal, so that when the day is over I may lay it
+                            <br>
+                            <p>In temptations, that I may be generous and loyal, so that when the day is over I may lay
+                                it
                                 at
-                                Your feet, with its successes which are all Yours, and its failures which are all my own,
+                                Your feet, with its successes which are all Yours, and its failures which are all my
+                                own,
                                 and
                                 feel that life is real and peaceful, and blessed when spent with You as the Guest of my
                                 soul.
@@ -832,23 +860,29 @@
                     <button class="accordion" id="last-prayer-title">Prayer to Overcome Anger</button>
                     <div class="panel last-panel transition-3">
                         <div class="prayer-panel-text-container">
-                            <p>O Lord, I am sorry that anger rises so often in my heart. Many times I feel disappointed in
+                            <p>O Lord, I am sorry that anger rises so often in my heart. Many times I feel disappointed
+                                in
                                 myself, yet even worse I offend You. Without Your help I will never win this battle with
                                 rage.
-                                But Your word says that "I have the strength for everything through Christ who empowers me."
+                                But Your word says that "I have the strength for everything through Christ who empowers
+                                me."
                             </p>
                             <br>
-                            <p>Help me to pray, to look to You, to take a step back and calm down. I repent of holding on to
+                            <p>Help me to pray, to look to You, to take a step back and calm down. I repent of holding
+                                on to
                                 anger and giving the devil a foothold in my life and relationships. I am determined to
                                 follow
-                                Your Word, until You have renewed my mind, giving me the mind of Christ - a mind at peace
+                                Your Word, until You have renewed my mind, giving me the mind of Christ - a mind at
+                                peace
                                 with
                                 God, with myself, and with others.</p>
-                                <br>
-                            <p>Shape my being into earnest kindness, a reflection of Your perfection. Grant me the grace of
-                                self-control, that I may not display unjust anger. In times when I feel anger surging again,
+                            <br>
+                            <p>Shape my being into earnest kindness, a reflection of Your perfection. Grant me the grace
+                                of
+                                self-control, that I may not display unjust anger. In times when I feel anger surging
+                                again,
                                 please remind me of these things.</p>
-                                <br>
+                            <br>
                             <p>In the name of the Father, the Son and the Holy Spirit. Amen.</p>
                         </div>
 
@@ -861,29 +895,68 @@
                         <div class="guide-text m-auto">
                             <h3>How to use this app to examine your conscience:</h3>
                             <ul>
-                                <li>Prepare yourself for confession - begin with a <a href="#beforeConfessionPrayer" onclick="openPrayerPanel(beforeConfessionPrayer)">prayer asking for God's help</a>.</li>
-                                <li>Go through the <a href="#">Examination of Conscience section</a>, and select all that apply.</li>
-                                <li>Copy the list with the copy button, and paste it into your phone's notes app. Now you're ready!</li>
+                                <li>Prepare yourself for confession - begin with a <a href="#beforeConfessionPrayer"
+                                        onclick="openPrayerPanel(beforeConfessionPrayer)">prayer asking for God's
+                                        help</a>.</li>
+                                <li>Go through the <a href="#">Examination of Conscience section</a>, and select all
+                                    that apply.</li>
+                                <li>Copy the list with the copy button, and paste it into your phone's notes app. Now
+                                    you're ready!</li>
                             </ul>
                             <br>
                             <h3>How to Go to Confession: A Step by Step Guide</h3>
                             <ol>
-                                <li><h4>Enter the confessional and greet the priest.</h4>The priest represents Christ and the Church. Begin by making the sign of the cross and say the <a href="#confessions-list-jump-point">first line on the list</a>: “Forgive me, Father ... since my last confession.”</li>
+                                <li>
+                                    <h4>Enter the confessional and greet the priest.</h4>The priest represents Christ
+                                    and the Church. Begin by making the sign of the cross and say the <a
+                                        href="#confessions-list-jump-point">first line on the list</a>: “Forgive me,
+                                    Father ... since my last confession.”
+                                </li>
 
-                                <li><h4>List your sins.</h4>Read through the list of sins that you created from above. Try to be thorough, but it's OK if you don't remember every single sin. It may be more of a conversation, as the priest may ask questions or comment. It doesn't have to be a non-stop laundry list of sins. When you're done, conclude with the <a href="#confessions-list-jump-point">last line on the list</a>: “I am sorry for these and any sins I may be forgetting.”</li>
+                                <li>
+                                    <h4>List your sins.</h4>Read through the list of sins that you created from above.
+                                    Try to be thorough, but it's OK if you don't remember every single sin. It may be
+                                    more of a conversation, as the priest may ask questions or comment. It doesn't have
+                                    to be a non-stop laundry list of sins. When you're done, conclude with the <a
+                                        href="#confessions-list-jump-point">last line on the list</a>: “I am sorry for
+                                    these and any sins I may be forgetting.”
+                                </li>
 
-                                <li><h4>Listen to the priest.</h4>When you're done confessing your sins, the priest may offer some guidance and suggest ways to avoid sins in the future. He'll then give you a penance, which could be a form of prayer or some work of mercy, for our healing and the healing of those we have hurt by our sins.</li>
+                                <li>
+                                    <h4>Listen to the priest.</h4>When you're done confessing your sins, the priest may
+                                    offer some guidance and suggest ways to avoid sins in the future. He'll then give
+                                    you a penance, which could be a form of prayer or some work of mercy, for our
+                                    healing and the healing of those we have hurt by our sins.
+                                </li>
 
-                                <li><h4>Pray the <a href="#actOfContrition" onclick="openPrayerPanel(actOfContrition)">Act of Contrition</a>.</h4>This can be recited from a <a href="#actOfContrition" onclick="openPrayerPanel(actOfContrition)">written prayer</a>, or made with your own words. Keep in mind, this is the most important part of a confession. There can be no forgiveness of sin if we truly do not feel sorry nor have a firm resolve not to repeat our sin.</li>
+                                <li>
+                                    <h4>Pray the <a href="#actOfContrition"
+                                            onclick="openPrayerPanel(actOfContrition)">Act of Contrition</a>.</h4>This
+                                    can be recited from a <a href="#actOfContrition"
+                                        onclick="openPrayerPanel(actOfContrition)">written prayer</a>, or made with your
+                                    own words. Keep in mind, this is the most important part of a confession. There can
+                                    be no forgiveness of sin if we truly do not feel sorry nor have a firm resolve not
+                                    to repeat our sin.
+                                </li>
 
-                                <li><h4>Receive absolution from God, via the priest.</h4>The priest will then say the <a href="#absolutionPrayer" onclick="openPrayerPanel(absolutionPrayer)">Absolution Prayer</a>. Make the sign of the cross and close with Amen.</li>
+                                <li>
+                                    <h4>Receive absolution from God, via the priest.</h4>The priest will then say the <a
+                                        href="#absolutionPrayer" onclick="openPrayerPanel(absolutionPrayer)">Absolution
+                                        Prayer</a>. Make the sign of the cross and close with Amen.
+                                </li>
 
-                                <li><h4>Depart and fulfill your act of penance.</h4></li>
+                                <li>
+                                    <h4>Depart and fulfill your act of penance.</h4>
+                                </li>
                             </ol>
 
                         </div>
                         <br>
-                        <p class="source">Some parts of this text are borrowed from the <a href="https://www.archindy.org/thelightison/guide.html">Archdiocese of Indianapolis</a> and from the Catholic App, <a href="https://hallow.com/blog/how-to-go-to-confession-the-sacrament-of-penance-reconciliation/#step-by-step-guide">Hallow</a>.</p>
+                        <p class="source">Some parts of this text are borrowed from the <a
+                                href="https://www.archindy.org/thelightison/guide.html">Archdiocese of Indianapolis</a>
+                            and from the Catholic App, <a
+                                href="https://hallow.com/blog/how-to-go-to-confession-the-sacrament-of-penance-reconciliation/#step-by-step-guide">Hallow</a>.
+                        </p>
                     </div>
                 </div>
 
@@ -896,23 +969,28 @@
                 <div class="footer-container d-flex flex-column align-items-center justify-content-evenly">
                     <div class="line-and-links d-flex align-items-center col-lg-7 col-md-9 col-sm-12 m-auto">
                         <div class="footer-line-1"></div>
-                        <div class="contact-links d-flex align-items-center justify-content-around col-lg-3 col-md-4 col-sm-5">
-                           <a href="mailto:wiorek.evan@gmail.com" target="_blank">
-                            <img src="./assets/email.svg" alt="email" class="contact-svg">
-                           </a> 
-                           <a href="https://github.com/EvanWiorek/" target="_blank">
-                            <img src="./assets/github.svg" alt="github" class="contact-svg">
-                           </a> 
-                           <a href="https://www.linkedin.com/in/evan-wiorek-082900104/" target="_blank">
-                            <img src="./assets/linkedin.svg" alt="linkedin" class="contact-svg">
-                           </a> 
+                        <div
+                            class="contact-links d-flex align-items-center justify-content-around col-lg-3 col-md-4 col-sm-5">
+                            <a href="mailto:wiorek.evan@gmail.com" target="_blank">
+                                <img src="./assets/email.svg" alt="email" class="contact-svg">
+                            </a>
+                            <a href="https://github.com/EvanWiorek/" target="_blank">
+                                <img src="./assets/github.svg" alt="github" class="contact-svg">
+                            </a>
+                            <a href="https://www.linkedin.com/in/evan-wiorek-082900104/" target="_blank">
+                                <img src="./assets/linkedin.svg" alt="linkedin" class="contact-svg">
+                            </a>
                         </div>
                         <div class="footer-line-1"></div>
                     </div>
                     <div class="footer-text col-lg-6 col-md-8 col-sm-10">
-                        <p>This was created as a passion project. I am thankful for the act of reconciliation, the right that Our Lord gave to his disciples before ascending into Heaven. Reconciliation has helped me tremendously in my life, and I wanted to share the beauty of the act with anyone who uses this app.</p>
+                        <p>This was created as a passion project. I am thankful for the act of reconciliation, the right
+                            that Our Lord gave to his disciples before ascending into Heaven. Reconciliation has helped
+                            me tremendously in my life, and I wanted to share the beauty of the act with anyone who uses
+                            this app.</p>
                         <br>
-                        <p>If you have any comments/feedback or questions, please feel free to let me know! I'd love to hear from you!</p>
+                        <p>If you have any comments/feedback or questions, please feel free to let me know! I'd love to
+                            hear from you!</p>
                         <br>
                     </div>
                     <div class="footer-text-bottom">

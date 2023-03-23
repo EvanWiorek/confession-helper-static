@@ -1,0 +1,864 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #161d20;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.08);
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #111618;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #192125;
+    border-radius: 20px;
+    border: 0px;
+}
+
+.background-image {
+    animation: rotation 1500s infinite linear;
+    z-index: -1;
+    position: fixed;
+    top: -200px;
+    left: -400px;
+    width: 150%;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+/*Universal styles*/
+
+.card-body {
+    background-color: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(15px);
+    padding: 18px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
+    font-size: 1.1rem;
+}
+
+.body-container-line {
+    width: 100%;
+    height: .1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.accordion {
+    background-color: rgba(255, 255, 255, 0.025);
+    backdrop-filter: blur(15px);
+    color: #dadcdd;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.08);
+    font-size: 1.2rem;
+    z-index: 1;
+}
+
+.transition-1 {
+    transition: max-height .64s ease-out;
+}
+
+.transition-2 {
+    transition: max-height 0.27s ease-out;
+}
+
+.transition-3 {
+    transition: max-height 0.35s ease-out;
+}
+
+.transition-4 {
+    transition: max-height 0.45s ease-out;
+}
+
+.transition-5 {
+    transition: max-height 0.40s ease-out;
+}
+
+.transition-6 {
+    transition: max-height 0.2s ease-out;
+}
+
+
+.active {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(15px);
+    max-height: 0;
+    overflow: hidden;
+    /* transition: max-height 0.3s ease-out; */
+    color: #dadcdd;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
+}
+
+.panel-text p {
+    padding: 20px;
+}
+
+.panel-text label {
+    padding: 22px 0px 22px 25px;
+    margin-left: 8px;
+}
+
+/*Desktop Navbar*/
+.navbar {
+    padding: 20px;
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+    width: 100%;
+    font-size: 1.3rem;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
+    backdrop-filter: blur(15px);
+    z-index: 100;
+    position: fixed;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+    transition: 0.2s;
+}
+
+.logo img {
+    width: 70px;
+    height: revert;
+}
+
+.logo h2 {
+    font-weight: 500;
+}
+
+.logo-line {
+    width: 100%;
+    height: .1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.logo h6 {
+    font-weight: 200;
+    font-size: 1rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.vertical-line {
+    font-weight: 100;
+    font-size: 1rem;
+    margin-top: -3px;
+}
+
+.nav-left a {
+    color: #dadcdd;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.nav-right a {
+    color: #dadcdd;
+    text-decoration: none;
+    margin: 10px;
+    transition: 0.2s;
+}
+
+.nav-right {
+    color:rgba(255,255,255,.3);
+    font-weight: 200;
+}
+
+/*Mobile Navbar*/
+.mobile-nav {
+    padding-left: 15px;
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+    width: 100%;
+    color: #dadcdd;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
+    backdrop-filter: blur(15px);
+    position: fixed;
+    z-index: 100;
+    visibility: hidden;
+}
+
+.mobile-line {
+    width: 100%;
+    height: .1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.mobile-left a {
+    color: #dadcdd;
+    text-align: left;
+    text-decoration: none;
+    padding: 10px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.05);
+}
+
+.mobile-right {
+    margin-top: 0px;
+}
+
+.mobile-right a {
+    color: #dadcdd;
+    padding: 14px 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    position: relative;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.05);
+}
+
+.icon {
+    color: #dadcdd;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 25px;
+    margin-right: 10px;
+    padding: 10px 10px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.05);
+}
+
+#mobile-links {
+    display: none;
+    transition: 3s ease-in;
+    padding-bottom: 10px;
+}
+
+.mobile-right a:hover {
+    color: #dadcdd;
+}
+
+.mobile-name {
+    font-size: 1.3rem;
+    color: #dadcdd;
+}
+
+/*Page Setup*/
+.setup {
+    padding-top: 150px;
+    color: #dadcdd;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.3);
+    -webkit-transition: .4s;
+    transition: .4s;
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, .1));
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: linear-gradient(176deg, rgba(218,220,221,1) 0%, rgba(194,194,194,1) 150%);
+    -webkit-transition: .4s;
+    transition: .4s;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, .2));
+}
+
+input:checked+.slider {
+    background-color: #3a89ca;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #3a89ca;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/*Examination of Conscience*/
+.eoc-container {
+    z-index: 1;
+    padding-top: 30px;
+    color: #dadcdd;
+}
+
+.eoc-title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .6);
+}
+
+.tenc-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .6);
+}
+
+/*Time since last confession*/
+#customTime,
+#customConfession {
+    padding: 5px 10px;
+    min-height: 30px;
+    max-height: 30px;
+    min-width: 400px;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    border-color: rgba(255, 255, 255, 0.05);
+    color: #dadcdd;
+    font-size: 1.1rem;
+    transition: 0.5s;
+    outline: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.option-1, .option-2 {
+    margin-bottom: 10px;
+}
+
+#customTime:hover {
+    box-shadow: 0 0 5px rgba(129, 230, 255, .5),
+        0 0 15px rgba(129, 230, 255, .5);
+}
+
+#firstTime {
+    cursor: pointer;
+}
+
+#firstTime:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+input[type=text]:focus,
+textarea:focus {
+    box-shadow: 0 0 5px rgba(129, 230, 255, .5);
+    outline: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    height: 18px;
+    width: 18px;
+    background-color: rgba(255, 255, 255, 0.05);
+    margin-right: 10px;
+    transform: translateY(3px);
+    cursor: pointer;
+    border: 3px solid;
+    border-color: rgba(255, 255, 255, 0.03);
+    outline: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.2s;
+}
+
+input[type=radio]:focus {
+    box-shadow: 0 0 5px rgba(129, 230, 255, .5);
+    outline: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+input[type="radio"]:checked {
+    background-image: url("./assets/checkmark.png");
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+input[type="radio"]:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 5px rgba(129, 230, 255, .5);
+    outline: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+/*Ten Commandments*/
+.commandment-1,
+.prayer-1 {
+    border-radius: 10px 10px 0px 0px;
+}
+
+#commandment-10-title,
+#last-prayer-title {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.last-panel {
+    border-radius: 0px 0px 10px 10px;
+    margin-bottom: 40px;
+}
+
+/*Checklist Items*/
+.check-item-container {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: rgb(218, 220, 221);
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Hide the browser's default checkbox */
+.check-item-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 24px;
+    left: -5px;
+    height: 18px;
+    width: 18px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 3px solid;
+    border-color: rgba(255, 255, 255, 0.03);
+    transition: 0.2s;
+    outline: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.check-item-container:hover input~.checkmark {
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 5px rgba(129, 230, 255, .5);
+    outline: 1px solid rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+
+.check-item-container input:checked~.checkmark {
+    background-color: rgba(255, 255, 255, 0.03);
+    outline: 1px solid rgba(255, 255, 255, 0.03);
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.check-item-container input:checked~.check-text {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.check-item-container input:checked~.checkmark:after {
+    display: block;
+}
+
+.check-item-container .checkmark:after {
+    left: 4.2px;
+    top: 2px;
+    width: 2.5px;
+    height: 5px;
+    border: solid rgba(255, 255, 255, 0.15);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/*Add to list*/
+.add-to-list-container {
+    color: #dadcdd;
+    text-align: center;
+}
+
+#customConfession {
+    min-width: 500px;
+    max-width: 500px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+#customConfession:hover {
+    color: rgba(255, 255, 255, 0.6);
+    outline: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 5px rgba(129, 230, 255, .5),
+        0 0 15px rgba(129, 230, 255, .4);
+}
+
+.add-to-list-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    color: #dadcdd;
+    outline: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 5px rgba(129, 230, 255, .5);
+    margin-bottom: 10px;
+}
+
+.add-to-list-button:hover {
+    outline: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 5px rgba(129, 230, 255, .5),
+        0 0 15px rgba(129, 230, 255, .5);
+}
+
+/*Confessions List*/
+#confessions-list-jump-point, #beforeConfessionPrayer, #actOfContrition, #absolutionPrayer {
+    scroll-margin-top: 12rem;
+}
+
+#confessionGuide {
+    scroll-margin-top: 9rem;
+}
+
+#prayers {
+    scroll-margin-top: 9rem;
+}
+
+.confession-list-bg {
+    background-color: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(15px);
+}
+
+.title-and-copy {
+    margin-bottom: 10px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .6);
+}
+
+.list-title {
+    color: #dadcdd;
+    margin-left: 20px;
+}
+
+.confessions-line {
+    width: 100%;
+    height: .1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#confession-list-container {
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 20px;
+    height: auto;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
+}
+
+.confession-list p {
+    color: #dadcdd;
+    margin-bottom: 20px;
+}
+
+#before-list {
+    color: #dadcdd;
+    margin-bottom: 30px;
+}
+
+.custom-confession {
+    cursor: pointer;
+}
+
+
+#after-list {
+    color: #dadcdd;
+    margin-top: 30px;
+}
+
+/*Confession Copy Button*/
+.copy-button {
+    padding: 2px 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0px;
+    gap: .5rem;
+    position: relative;
+}
+
+.copy-button img {
+    width: 20px;
+    opacity: 0.3;
+}
+
+.copy-button img:hover {
+    opacity: 0.4;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: .8rem;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: -120%;
+    left: 180%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    backdrop-filter: blur(15px);
+}
+
+/*down pointing arrow*/
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: -35%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(255, 255, 255, 0.03) transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*Prayers and Confession Guide*/
+.prayers-and-guide-container {
+    margin-top: 50px;
+}
+
+.prayer-panel-text-container {
+    padding: 20px 5px;
+}
+
+
+.prayers-and-guide-title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #dadcdd;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .6);
+}
+
+.prayers-title,
+.guide-title {
+    margin-bottom: 10px;
+    text-align: center;
+    color: #dadcdd;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .6);
+}
+
+.prayers-and-guide-container {
+    margin-bottom: 70px;
+}
+
+.guide-body {
+    color: #dadcdd;
+    background-color: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(15px);
+    padding: 22px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
+    font-size: .9rem;
+}
+
+.guide-text p {
+    font-weight: 300;
+}
+
+.guide-text h3 {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.guide-text h4 {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.guide-text ul {
+    list-style-position: outside;
+    padding-left: 20px;
+}
+
+.guide-text ol {
+    list-style-position: outside;
+    padding-left: 20px;
+}
+
+.guide-text li {
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.guide-text span {
+    font-weight: 500;
+}
+
+.guide-container a {
+    color: #dadcdd;
+}
+
+.source {
+    font-style: italic;
+    color: rgba(255, 255, 255, .2);
+}
+
+.source a {
+    color: rgba(255, 255, 255, .2);
+}
+
+/*Footer*/
+.footer-body {
+    padding: 110px 0px;
+    background: linear-gradient(0deg, rgb(0, 0, 0, .3) 0%, rgba(255, 255, 255, 0) 130%);
+    backdrop-filter: blur(15px);
+    width: 100%;
+    height: 200px;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / .5);
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.08);
+}
+
+.line-and-links {
+    margin-bottom: 20px;
+}
+
+.footer-container {
+    height: 100%;
+}
+
+.footer-text p {
+    color: rgba(255, 255, 255, .15);
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.footer-text-bottom p {
+    color: rgba(255, 255, 255, .15);
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.footer-line-1 {
+    width: 100%;
+    height: .1px;
+    background-color: rgba(255, 255, 255, .1);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.contact-svg {
+    filter: invert(99%) sepia(0%) saturate(787%) hue-rotate(37deg) brightness(116%) contrast(100%);
+    opacity: .1;
+    width: 30px;
+}
+
+.contact-svg:hover {
+    opacity: .08;
+    transition: 0.2s;
+}
+
+
+
+@media only screen and (min-width: 912px) {
+    .accordion:hover {
+        background-color: rgba(255, 255, 255, 0.06);
+    }
+    
+    .logo:hover {
+        opacity: .7;
+    }
+    
+    .nav-right a:hover {
+        opacity: .7;
+    }
+    
+    .container:hover {
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+

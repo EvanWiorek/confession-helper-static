@@ -184,8 +184,6 @@
     }
 
     .list-title {
-        color: #dadcdd;
-        /* font-size: 1.5rem; */
         margin-left: 10px;
     }
 
@@ -210,8 +208,8 @@
         font-size: .5rem;
     }
 
-    .eoc-container {
-        padding-top: 120px;
+    .setup {
+        padding-top: 130px;
     }
 
     .logo {
@@ -380,11 +378,7 @@
         font-size: .9rem;
     }
 
-    .eoc-container {
-        padding-top: 110px;
-    }
-
-    .eoc-container {
+    .setup {
         padding-top: 130px;
     }
 
@@ -456,22 +450,6 @@
     .col-lg-12 {
         flex: 0 0 auto;
         width: 100%;
-    }
-
-    .accordion:hover {
-        background-color: rgba(255, 255, 255, 0.06);
-    }
-
-    .logo:hover {
-        opacity: .7;
-    }
-
-    .nav-right a:hover {
-        color: rgba(255, 255, 255, 0.6);
-    }
-
-    .container:hover {
-        color: rgba(255, 255, 255, 0.6);
     }
 
 }
