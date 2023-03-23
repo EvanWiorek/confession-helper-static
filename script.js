@@ -140,23 +140,29 @@ function outFunc() {
   tooltip.innerText = "Copy List";
 }
 
-
 //light mode/dark mode
+var theme = document.getElementById("theme");
+var backgroundDark = document.getElementById("background-dark");
+var backgroundLight = document.getElementById("background-light");
+var modeName = document.getElementById("mode-name");
+var desktopLogo = document.getElementById("desktop-logo");
+var mobileLogo = document.getElementById("mobile-logo");
+
 function toggleTheme() {
-  var theme = document.getElementById("theme");
-  var backgroundDark = document.getElementById("background-dark");
-  var backgroundLight = document.getElementById("background-light");
-  var modeName = document.getElementById("mode-name")
   if (theme.getAttribute('href') == 'dark.css') {
     theme.setAttribute('href', 'light.css');
     backgroundLight.style = "display: block;";
     backgroundDark.style = "display: none;";
     modeName.innerText = "Light Mode";
+    desktopLogo.src = "./assets/logo-light.png";
+    mobileLogo.src = "./assets/logo-light.png";
   } else {
     theme.setAttribute('href', 'dark.css');
     backgroundLight.style = "display: none;";
     backgroundDark.style = "display: block;";
     modeName.innerText = "Dark Mode";
+    desktopLogo.src = "./assets/logo-dark.png";
+    mobileLogo.src = "./assets/logo-dark.png";
   }
 }
 

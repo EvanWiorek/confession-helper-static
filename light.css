@@ -157,7 +157,6 @@ html {
 .logo img {
     width: 70px;
     height: revert;
-    filter: invert();
     opacity: .6;
 }
 
@@ -214,6 +213,7 @@ html {
     position: fixed;
     z-index: 100;
     visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.03);
 }
 
 .mobile-line {
