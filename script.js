@@ -147,10 +147,12 @@ var backgroundLight = document.getElementById("background-light");
 var modeName = document.getElementById("mode-name");
 var desktopLogo = document.getElementById("desktop-logo");
 var mobileLogo = document.getElementById("mobile-logo");
+var favicon = document.getElementById("favicon")
 
 function toggleTheme() {
   if (theme.getAttribute('href') == 'dark.css') {
     theme.setAttribute('href', 'light.css');
+    favicon.setAttribute('href', '/assets/favicon-light.ico');
     backgroundLight.style = "display: block;";
     backgroundDark.style = "display: none;";
     modeName.innerText = "Light Mode";
@@ -158,6 +160,7 @@ function toggleTheme() {
     mobileLogo.src = "./assets/logo-light.png";
   } else {
     theme.setAttribute('href', 'dark.css');
+    favicon.setAttribute('href', '/assets/favicon-dark.ico');
     backgroundLight.style = "display: none;";
     backgroundDark.style = "display: block;";
     modeName.innerText = "Dark Mode";
