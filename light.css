@@ -513,7 +513,7 @@ input[type="radio"]:hover {
 }
 
 .check-item-container input:checked~.check-text {
-    opacity: .5;
+    opacity: .3;
 }
 
 .checkmark:after {
