@@ -152,6 +152,7 @@ html {
 
 .logo {
     transition: 0.2s;
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, .3)) drop-shadow(0px 0px 8px rgba(0, 0, 0, .25));
 }
 
 .logo img {
@@ -196,6 +197,7 @@ html {
     text-decoration: none;
     margin: 10px;
     transition: 0.2s;
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, .3)) drop-shadow(0px 0px 8px rgba(0, 0, 0, .25));
 }
 
 .nav-right {
@@ -354,14 +356,14 @@ input:checked+.slider:before {
     margin-bottom: 20px;
     text-align: center;
     color: rgba(0, 0, 0, .5);
-    text-shadow: 0px 2px 3px rgba(0, 0, 0, .2);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, .2), 0px 0px 8px rgba(0, 0, 0, .15);
 }
 
 .tenc-title {
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
-    text-shadow: 0px 2px 3px rgba(0, 0, 0, .2);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, .2), 0px 0px 8px rgba(0, 0, 0, .15);
 }
 
 /*Time since last confession*/
@@ -602,7 +604,7 @@ input[type="radio"]:hover {
 
 .title-and-copy {
     margin-bottom: 10px;
-    text-shadow: 0px 2px 3px rgba(0, 0, 0, .2);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, .2), 0px 0px 8px rgba(0, 0, 0, .15);
 }
 
 .list-title {
@@ -726,7 +728,7 @@ input[type="radio"]:hover {
     margin-bottom: 20px;
     text-align: center;
     color: rgba(0, 0, 0, .5);
-    text-shadow: 0px 2px 3px rgba(0, 0, 0, .2);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, .2), 0px 0px 8px rgba(0, 0, 0, .15);
 }
 
 .prayers-title,
@@ -734,7 +736,7 @@ input[type="radio"]:hover {
     margin-bottom: 10px;
     text-align: center;
     color: rgba(0, 0, 0, .6);
-    text-shadow: 0px 2px 3px rgba(0, 0, 0, .2);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, .2), 0px 0px 8px rgba(0, 0, 0, .15);
 }
 
 .prayers-and-guide-container {
